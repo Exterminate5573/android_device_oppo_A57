@@ -523,7 +523,8 @@ int32_t QCamera3HeapMemory::getOldestFrameNumber(uint32_t &bufIndex)
     for (uint32_t index = 0;
             index < mBufferCount; index++) {
         if (mMemInfo[index].handle) {
-            if ((empty) || (!empty && oldest > mCurrentFrameNumbers[index])) {
+            if ((empty) || (!empty && oldest > mCurrentFrameNumbers[index]
+                && mCurrentFrameNumbers[index] != -1)) {
                 oldest = mCurrentFrameNumbers[index];
                 bufIndex = index;
             }
@@ -1158,7 +1159,9 @@ int32_t QCamera3GrallocMemory::getOldestFrameNumber(uint32_t &bufIndex)
     for (uint32_t index = mStartIdx;
             index < MM_CAMERA_MAX_NUM_FRAMES; index++) {
         if (mMemInfo[index].handle) {
-            if ((empty) || (!empty && oldest > mCurrentFrameNumbers[index])) {
+            if ((empty) ||
+                (!empty && oldest > mCurrentFrameNumbers[index]
+                && mCurrentFrameNumbers[index] != -1)) {
                 oldest = mCurrentFrameNumbers[index];
                 bufIndex = index;
             }
