@@ -6934,6 +6934,7 @@ int32_t QCamera2HardwareInterface::addPreviewChannel()
     rc = pChannel->init(NULL, NULL, NULL);
     if (rc != NO_ERROR) {
         LOGE("init preview channel failed, ret = %d", rc);
+        delete pChannel;
         return rc;
     }
 
@@ -6942,6 +6943,7 @@ int32_t QCamera2HardwareInterface::addPreviewChannel()
                             metadata_stream_cb_routine, this);
     if (rc != NO_ERROR) {
         LOGE("add metadata stream failed, ret = %d", rc);
+        delete pChannel;
         return rc;
     }
 
@@ -6964,6 +6966,12 @@ int32_t QCamera2HardwareInterface::addPreviewChannel()
         }
     }
 
+    if (rc != NO_ERROR) {
+        LOGE("add raw/preview stream failed, ret = %d", rc);
+        delete pChannel;
+        return rc;
+    }
+
     if (((mParameters.fdModeInVideo())
             || (mParameters.getDcrf() == true)
             || (mParameters.getRecordingHintValue() != true))
@@ -6972,6 +6980,7 @@ int32_t QCamera2HardwareInterface::addPreviewChannel()
                 NULL, this);
         if (rc != NO_ERROR) {
             LOGE("add Analysis stream failed, ret = %d", rc);
+            delete pChannel;
             return rc;
         }
     }
@@ -7375,6 +7384,7 @@ int32_t QCamera2HardwareInterface::addCaptureChannel()
                         this);
     if (rc != NO_ERROR) {
         LOGE("init capture channel failed, ret = %d", rc);
+        delete pChannel;
         return rc;
     }
 
@@ -7383,6 +7393,7 @@ int32_t QCamera2HardwareInterface::addCaptureChannel()
                             metadata_stream_cb_routine, this);
     if (rc != NO_ERROR) {
         LOGE("add metadata stream failed, ret = %d", rc);
+        delete pChannel;
         return rc;
     }
 
@@ -7392,6 +7403,7 @@ int32_t QCamera2HardwareInterface::addCaptureChannel()
 
         if (rc != NO_ERROR) {
             LOGE("add preview stream failed, ret = %d", rc);
+            delete pChannel;
             return rc;
         }
 #ifdef TARGET_TS_MAKEUP
@@ -7407,6 +7419,7 @@ int32_t QCamera2HardwareInterface::addCaptureChannel()
 
         if (rc != NO_ERROR) {
             LOGE("add postview stream failed, ret = %d", rc);
+            delete pChannel;
             return rc;
         }
     }
@@ -7416,6 +7429,7 @@ int32_t QCamera2HardwareInterface::addCaptureChannel()
                 NULL, this);
         if (rc != NO_ERROR) {
             LOGE("add snapshot stream failed, ret = %d", rc);
+            delete pChannel;
             return rc;
         }
     }
@@ -7433,6 +7447,7 @@ int32_t QCamera2HardwareInterface::addCaptureChannel()
                 CAM_STREAM_TYPE_RAW, stream_cb, this);
         if (rc != NO_ERROR) {
             LOGE("add raw stream failed, ret = %d", rc);
+            delete pChannel;
             return rc;
         }
     }
