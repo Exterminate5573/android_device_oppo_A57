@@ -12,6 +12,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # APEX
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
+# Bootanimation
+TARGET_BOOTANIMATION_HALF_RES := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
