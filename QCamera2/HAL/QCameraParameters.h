@@ -33,7 +33,6 @@
 #include "QCameraParametersIntf.h"
 #include "QCameraThermalAdapter.h"
 #include "QCameraCommon.h"
-#include "CameraParameters.h"
 
 
 extern "C" {
