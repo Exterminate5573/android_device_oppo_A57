@@ -399,8 +399,6 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd \
     libcld80211 \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwpa_client \
