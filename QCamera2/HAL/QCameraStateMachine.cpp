@@ -1580,8 +1580,6 @@ int32_t QCameraStateMachine::procEvtPreviewingState(qcamera_sm_evt_enum_t evt,
             m_parent->signalAPIResult(&result);
         }
         break;
-    case QCAMERA_SM_EVT_CANCEL_PICTURE:
-    case QCAMERA_SM_EVT_STOP_RECORDING:
     case QCAMERA_SM_EVT_RELEASE_RECORIDNG_FRAME:
     case QCAMERA_SM_EVT_RELEASE:
         {
@@ -1591,6 +1589,18 @@ int32_t QCameraStateMachine::procEvtPreviewingState(qcamera_sm_evt_enum_t evt,
             result.request_api = evt;
             result.result_type = QCAMERA_API_RESULT_TYPE_DEF;
             m_parent->signalAPIResult(&result);
+        }
+        break;
+    case QCAMERA_SM_EVT_CANCEL_PICTURE:
+    case QCAMERA_SM_EVT_STOP_RECORDING:
+        {
+            // no op needed here
+            LOGW("No ops for evt(%d) in state(%d)", evt, m_state);
+            result.status = NO_ERROR;
+            result.request_api = evt;
+            result.result_type = QCAMERA_API_RESULT_TYPE_DEF;
+            m_parent->signalAPIResult(&result);
+
         }
         break;
     case QCAMERA_SM_EVT_EVT_INTERNAL:
