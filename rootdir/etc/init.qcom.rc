@@ -504,7 +504,7 @@ service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     oneshot
 
 service vendor.sensors.qti /vendor/bin/sensors.qti
-    class core
+    class main
     user system
     group system
 
