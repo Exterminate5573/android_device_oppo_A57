@@ -584,11 +584,6 @@ service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/glob
     disabled
     oneshot
 
-service battery_monitor /system/bin/battery_monitor
-    user system
-    group system
-    disabled
-
 service profiler_daemon /system/bin/profiler_daemon
     class late_start
     user root
@@ -606,11 +601,6 @@ service vendor.ssr_diag /system/vendor/bin/ssr_diag
     class late_start
     user system
     group system
-    disabled
-
-service charger_monitor /system/bin/charger_monitor
-    user root
-    group root
     disabled
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
