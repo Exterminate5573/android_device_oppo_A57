@@ -340,6 +340,10 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-service \
     thermal.msm8937
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.oppo_msm8937
+
 # Trust
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
