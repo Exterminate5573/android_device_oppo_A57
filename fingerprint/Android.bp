@@ -21,6 +21,7 @@ cc_binary {
     vintf_fragments: ["android.hardware.biometrics.fingerprint@2.0-service.A57.xml"],
     srcs: ["service.cpp", "BiometricsFingerprint.cpp"],
     shared_libs: [
+        "libbase",
         "libutils",
         "liblog",
         "libhidlbase",
