@@ -140,6 +140,10 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml
 
+# DPM
+PRODUCT_PACKAGES += \
+    libshim_dpmframework
+
 # DRM
 ## TODO
 ## Kill legacy @1.0 HIDL once we'll use 4.9,
