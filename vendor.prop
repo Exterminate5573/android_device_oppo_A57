@@ -139,3 +139,6 @@ ro.soc.model=MSM8940
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
 vendor.usb.use_gadget_hal=0
+
+# Zygote
+zygote.critical_window.minute=10
