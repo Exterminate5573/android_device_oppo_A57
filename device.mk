@@ -141,6 +141,10 @@ PRODUCT_PACKAGES += \
     libstdc++_vendor \
     android.frameworks.displayservice@1.0.vendor
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
