@@ -62,10 +62,6 @@ dalvik.vm.heapsize=512m
 dalvik.vm.heapstartsize=8m
 dalvik.vm.heaptargetutilization=0.75
 
-# DPM
-persist.vendor.dpm.feature=1
-persist.vendor.dpm.loglevel=0
-
 # Coresight
 persist.debug.coresight.config=stm-events
 
