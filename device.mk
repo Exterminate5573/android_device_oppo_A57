@@ -339,6 +339,7 @@ PRODUCT_PACKAGES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
+    libshim_imsvideocodec \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \

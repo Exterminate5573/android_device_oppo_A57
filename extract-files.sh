@@ -82,6 +82,9 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libhidltransport.so" "libcutils-v29.so" "${2}"
             "${PATCHELF}" --add-needed "libshim_dpmframework.so" "${2}"
             ;;
+        system_ext/lib64/lib-imsvideocodec.so)
+            "${PATCHELF}" --add-needed "libshim_imsvideocodec.so" "${2}"
+            ;;
         vendor/bin/mm-qcamera-daemon)
             sed -i "s/\xca\x56\xbc\xc0/\xca\x56\xd0\xc0/" "${2}"
             ;;
