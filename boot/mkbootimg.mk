@@ -28,9 +28,7 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(INSTAL
 	$(hide) $(call assert-max-image-size, $@, $(call get-bootimage-partition-size,$@,boot))
 	@echo "Made boot image: $@"
 
-$(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(recovery_ramdisk) $(recovery_kernel)
-	@echo "----- Making recovery image ------"
-	$(hide) $(MKBOOTIMG) $(INTERNAL_RECOVERYIMAGE_ARGS) $(INTERNAL_MKBOOTIMG_VERSION_ARGS) $(BOARD_MKBOOTIMG_ARGS) --output $@
+$(INSTALLED_RECOVERYIMAGE_TARGET): $(recoveryimage-deps) $(RECOVERYIMAGE_EXTRA_DEPS) $(INSTALLED_BOOTIMAGE_TARGET)
+	$(call build-recoveryimage-target, $@, $(recovery_kernel))
 	$(hide) cat $(BOOT_PATCH)/recovery.patch >> $@
-	$(hide) $(call assert-max-image-size, $@, $(BOARD_RECOVERYIMAGE_PARTITION_SIZE),raw)
 	@echo "Made recovery image: $@"
