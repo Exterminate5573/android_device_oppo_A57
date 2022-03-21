@@ -575,14 +575,6 @@ vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0-service.so
 vendor/lib64/vendor.qti.gnss@3.0.so
 
-# GPS configs
-vendor/etc/flp.conf
-vendor/etc/gps.conf
-vendor/etc/izat.conf
-vendor/etc/lowi.conf
-vendor/etc/sap.conf
-vendor/etc/xtwifi.conf
-
 # Gatekeeper - from olive - Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.5.0.QCNCNXM:user/release-keys
 vendor/lib64/hw/gatekeeper.msm8937.so|7be56a403c30f093865f08bf0f0335aeb99ec7fd
 
