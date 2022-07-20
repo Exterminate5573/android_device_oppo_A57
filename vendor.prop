@@ -29,6 +29,34 @@ vendor.voice.voip.conc.disabled=true
 # Disable handling audio direction changes on IMS calls.
 ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
 
+# Bluetooth
+bluetooth.profile.asha.central.enabled=true
+bluetooth.profile.a2dp.source.enabled=true
+bluetooth.profile.avrcp.target.enabled=true
+bluetooth.profile.bap.broadcast.assist.enabled=true
+bluetooth.profile.bap.unicast.server.enabled=true
+bluetooth.profile.bas.client.enabled=true
+bluetooth.profile.csip.set_coordinator.enabled=true
+bluetooth.profile.gatt.enabled=true
+bluetooth.profile.hap.client.enabled=true
+bluetooth.profile.hfp.ag.enabled=true
+bluetooth.profile.hid.device.enabled=true
+bluetooth.profile.hid.host.enabled=true
+bluetooth.profile.map.server.enabled=true
+bluetooth.profile.mcp.server.enabled=true
+bluetooth.profile.opp.enabled=true
+bluetooth.profile.pan.nap.enabled=true
+bluetooth.profile.pan.panu.enabled=true
+bluetooth.profile.pbap.server.enabled=true
+bluetooth.profile.sap.server.enabled=true
+bluetooth.profile.tbs.server.enabled=true
+bluetooth.profile.vc.server.enabled=true
+bluetooth.hfp.client=1
+persist.vendor.btstack.enable.splita2dp=false
+qcom.bluetooth.soc=smd
+ro.bluetooth.hfp.ver=1.7
+ro.qualcomm.bt.hci_transport=smd
+
 # Camera
 persist.vendor.camera.HAL3.enabled=1
 
