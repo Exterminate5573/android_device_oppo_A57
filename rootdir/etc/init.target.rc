@@ -35,6 +35,10 @@ on init
     # vold needs keymaster that needs qseecomd
     start vendor.qseecomd
 
+on early-fs
+    # We need vold early for metadata encryption
+    start vold
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -52,6 +56,10 @@ on late-fs
     start servicemanager
     start surfaceflinger
     start bootanim
+
+    # Wait for keymaster
+    exec_start wait_for_keymaster
+
     # mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
 
