@@ -82,7 +82,7 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "libshim_dpmframework.so" "${2}"
             ;;
         system_ext/lib64/lib-imsvideocodec.so)
-            "${PATCHELF}" --add-needed "libshim_imsvideocodec.so" "${2}"
+            "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
             ;;
         vendor/bin/mm-qcamera-daemon)
             sed -i "s|/data/misc/camera/cam_socket|/data/vendor/qcam/cam_socket|g" "${2}"
