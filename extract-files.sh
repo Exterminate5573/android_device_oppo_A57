@@ -79,7 +79,7 @@ function blob_fixup() {
             sed -i 's|/product/framework/qcrilhook.jar|/system_ext/framework/qcrilhook.jar|g' "${2}"
             ;;
         system_ext/lib/libdpmframework.so | system_ext/lib64/libdpmframework.so)
-            "${PATCHELF}" --add-needed "libshim_dpmframework.so" "${2}"
+            "${PATCHELF}" --add-needed "libcutils_shim.so" "${2}"
             ;;
         system_ext/lib64/lib-imsvideocodec.so)
             "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
