@@ -113,13 +113,6 @@ on init
     chmod 0660          /dev/sunwave_fp
     #add by sunwave end
 
-# Allow usb charging to be disabled peristently
-on property:persist.usb.chgdisabled=1
-    write /sys/class/power_supply/battery/charging_enabled 0
-
-on property:persist.usb.chgdisabled=0
-    write /sys/class/power_supply/battery/charging_enabled 1
-
 service vendor.qseecomd /vendor/bin/qseecomd
    class core
    user root
