@@ -67,9 +67,6 @@ function blob_fixup() {
         vendor/bin/mm-qcamera-daemon)
             sed -i "s/\xca\x56\xbc\xc0/\xca\x56\xd0\xc0/" "${2}"
             ;;
-        vendor/lib/mediadrm/libwvdrmengine.so|vendor/lib64/mediadrm/libwvdrmengine.so)
-            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
-            ;;
         vendor/lib64/libalipay_factory.so|vendor/lib64/lib_fpc_tac_shared.so)
             sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
             ;;
@@ -80,15 +77,6 @@ function blob_fixup() {
         vendor/lib/libmmcamera2_stats_modules.so)
             sed -i "s|libandroid.so|libcamshim.so|g" "${2}"
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
-            ;;
-        vendor/lib64/libril-qc-hal-qmi.so)
-            "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
-            ;;
-        vendor/lib64/libsettings.so)
-            "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
-            ;;
-        vendor/lib64/libwvhidl.so)
-            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
         product/lib64/libdpmframework.so)
             "${PATCHELF}" --add-needed "libshim_dpmframework.so" "${2}"
