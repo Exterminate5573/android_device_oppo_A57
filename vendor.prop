@@ -26,9 +26,6 @@ vendor.voice.playback.conc.disabled=true
 vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=true
 
-# Disable handling audio direction changes on IMS calls.
-ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
-
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
 bluetooth.hardware.power.operating_voltage_mv=3300
@@ -130,6 +127,8 @@ ro.telephony.default_network=22,20
 service.qti.ims.enabled=1
 telephony.lteOnCdmaDevice=1
 vendor.service.qti.ims.enabled=1
+ro.telephony.block_binder_thread_on_incoming_calls=false
+ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
 
 # SoC
 ro.soc.manufacturer=Qualcomm
