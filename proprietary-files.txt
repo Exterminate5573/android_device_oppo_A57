@@ -682,11 +682,11 @@ vendor/lib64/libqti-perfd-client.so|d6502c16ab4dd7642641b6a8cbb061847ff5cb2d
 vendor/lib64/libqti-perfd.so|2a30ad97973e17694b897c09b5b293c96cbcbab0
 vendor/lib64/libqti-util.so|834cc98315887e57a5f229f9ee1a0d20d0d8f4c3
 
-# Peripheral manager
-vendor/bin/pm-proxy
-vendor/bin/pm-service
-vendor/lib/libperipheral_client.so
-vendor/lib64/libperipheral_client.so
+# Peripheral manager - from FP3
+vendor/bin/pm-proxy|910437c11108aa66e803bbc760ce3998d141a6b4
+vendor/bin/pm-service|98827a6bf6693033a7c767e3fb4f097b9075a0ef
+vendor/lib/libperipheral_client.so|7ace2f7c8c7ebd986db6c7796de7237e584e658b
+vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Postprocessing
 system/etc/permissions/com.qti.snapdragon.sdk.display.xml
