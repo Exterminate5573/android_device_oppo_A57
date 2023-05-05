@@ -538,6 +538,9 @@ on property:crypto.driver.load=1
      insmod /system/lib/modules/qce.ko
      insmod /system/lib/modules/qcedev.ko
 
+on property:persist.sys.xtra-daemon.enabled=*
+    restart loc_launcher
+
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
