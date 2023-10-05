@@ -130,7 +130,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libgui_vendor \
-    libstdc++.vendor \
+    libstdc++_vendor \
     android.frameworks.displayservice@1.0.vendor
 
 # Display
