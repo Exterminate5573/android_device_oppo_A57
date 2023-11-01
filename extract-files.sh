@@ -87,6 +87,9 @@ function blob_fixup() {
         vendor/bin/mm-qcamera-daemon)
             sed -i "s|/data/misc/camera/cam_socket|/data/vendor/qcam/cam_socket|g" "${2}"
             ;;
+        vendor/bin/pm-service)
+            grep -q "libutils-v33.so" "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
+            ;;
         vendor/bin/rmt_storage)
             # Drop IO priority set-up
             sed -i "s|\xe0\x0f\x1f\x32|\x0e\x00\x00\x14|g" "${2}"
