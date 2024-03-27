@@ -340,6 +340,12 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+PRODUCT_PACKAGES += \
+    android.hardware.radio.c_shim@1.0 \
+    android.hardware.radio.c_shim@1.1 \
+    android.hardware.radio.c_shim@1.2 \
+    android.hardware.radio.config@1.1-service.wrapper
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \

@@ -88,6 +88,11 @@ function blob_fixup() {
             sed -i "s|libandroid.so|libcamshim.so|g" "${2}"
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
             ;;
+        vendor/lib64/libril-qc-hal-qmi.so)
+            for v in 1.{0..2}; do
+                sed -i "s|android.hardware.radio.config@${v}.so|android.hardware.radio.c_shim@${v}.so|g" "${2}"
+            done
+            ;;
     esac
 }
 
