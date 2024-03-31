@@ -16,5 +16,5 @@
 
 /* Magic constants for Device Management Services */
 #define DMS_V01_IDL_MAJOR_VERS 1
-#define DMS_V01_IDL_MINOR_VERS 67
+#define DMS_V01_IDL_MINOR_VERS 83
 #define DMS_V01_IDL_TOOL_VERS 6
