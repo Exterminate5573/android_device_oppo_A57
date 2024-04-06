@@ -718,11 +718,9 @@ vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
 vendor/lib/hw/activity_recognition.msm8937.so|3c242692489ea0d6c953e83081cc9bef3cf55a34
 vendor/lib/libsensor1.so|55ce19a402bf2298d2a2700ae1044cb8e08e5e1e
 vendor/lib/libsensor_reg.so|f9fdb165f502e54349f8e83b778ec4c926325959
-vendor/lib/sensors.ssc.so
 vendor/lib64/hw/activity_recognition.msm8937.so|b7c6b3c5fbf530b7754a22b8627ab4e8b38d982d
 vendor/lib64/libsensor1.so|0f5b50c2195995d81bbcbfcbe359c3064865f4cf
 vendor/lib64/libsensor_reg.so|da3d8894dc50b26980e2542e5881e1b9ff9db5c0
-vendor/lib64/sensors.ssc.so
 
 # Thermal - from ASUS_X00PD-user 10 QKQ1.191002.002 17.00.2003.23-20200401 release-keys
 vendor/bin/thermal-engine|1adec8c5de1a095ed790879e5aabe1e249c816e3
