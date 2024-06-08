@@ -19,14 +19,17 @@
 
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.oppo_msm8937      u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.oppo_msm8937                        u:object_r:hal_light_default_exec:s0
 
 # Input devices
 /(vendor|system/vendor)/usr/idc(/.*)?                                       u:object_r:vendor_idc_file:s0
 /(vendor|system/vendor)/usr/keylayout(/.*)?                                 u:object_r:vendor_keylayout_file:s0
 
 # LED
-/sys/devices(/platform)?/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?      u:object_r:sysfs_leds:s0
-/sys/devices(/platform)?/soc/leds-qpnp-[0-9]+/leds(/.*)?                    u:object_r:sysfs_leds:s0
+/sys/devices/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/leds(/.*)?        u:object_r:sysfs_leds:s0
+/sys/devices/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/blink             u:object_r:sysfs_leds:s0
+/sys/devices/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/grpfreq           u:object_r:sysfs_leds:s0
+/sys/devices/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/grppwm            u:object_r:sysfs_leds:s0
 
 # Location
 /data/vendor/location/xtra/socket_hal_xtra                                  u:object_r:location_socket:s0
