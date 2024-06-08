@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.touch@1.0-service.oppo_msm8937"
+#define LOG_TAG "vendor.lineage.touch@1.0-service.A57"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>

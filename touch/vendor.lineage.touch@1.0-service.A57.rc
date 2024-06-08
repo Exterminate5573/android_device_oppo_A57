@@ -3,7 +3,7 @@ on boot
     chmod 664 /proc/touchpanel/gesture_enable
     write /proc/touchpanel/gesture_enable 1
 
-service touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.oppo_msm8937
+service touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.A57
     class hal
     user system
     group system

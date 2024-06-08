@@ -1,8 +1,8 @@
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service.oppo_msm8937",
+    name: "android.hardware.biometrics.fingerprint@2.1-service.A57",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.oppo_msm8937.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.oppo_msm8937.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.A57.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.A57.xml"],
     vendor: true,
     relative_install_path: "hw",
     srcs: [

@@ -8,6 +8,9 @@
 
 set -e
 
+DEVICE=A57
+VENDOR=oppo
+
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
@@ -23,11 +26,6 @@ source "${HELPER}"
 
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
-
-ONLY_COMMON=
-ONLY_TARGET=
-KANG=
-SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
@@ -69,6 +67,16 @@ function blob_fixup() {
         vendor/lib/mediadrm/libwvdrmengine.so|vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
+        vendor/lib64/libalipay_factory.so|vendor/lib64/lib_fpc_tac_shared.so)
+            sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
+            ;;
+        vendor/lib/libmmcamera2_sensor_modules.so)
+            sed -i "s/\/system\/etc\/camera\//\/vendor\/etc\/camera\//g" "${2}"
+            ;;
+        vendor/lib/libmmcamera2_stats_modules.so)
+            sed -i "s|libandroid.so|libcamshim.so|g" "${2}"
+            "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
+            ;;
         vendor/lib64/libril-qc-hal-qmi.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
             ;;
@@ -84,19 +92,10 @@ function blob_fixup() {
     esac
 }
 
-if [ -z "${ONLY_TARGET}" ]; then
-    # Initialize the helper for common device
-    setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+# Initialize the helper
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-fi
-
-if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
-    # Reinitialize the helper for device
-    source "${MY_DIR}/../${DEVICE}/extract-files.sh"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
-
-    extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-fi
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
+        "${KANG}" --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"
