@@ -55,17 +55,31 @@ static T get(const std::string& path, const T& def) {
     return file.fail() ? def : result;
 }
 
-static int rgbToBrightness(const LightState& state) {
-    int color = state.color & 0x00ffffff;
-    return ((77 * ((color >> 16) & 0x00ff))
-            + (150 * ((color >> 8) & 0x00ff))
-            + (29 * (color & 0x00ff))) >> 8;
+static uint32_t getBrightness(const LightState& state) {
+    uint32_t alpha, red, green, blue;
+
+    // Extract brightness from AARRGGBB
+    alpha = (state.color >> 24) & 0xff;
+
+    // Retrieve each of the RGB colors
+    red = (state.color >> 16) & 0xff;
+    green = (state.color >> 8) & 0xff;
+    blue = state.color & 0xff;
+
+    // Scale RGB colors if a brightness has been applied by the user
+    if (alpha != 0xff) {
+        red = red * alpha / 0xff;
+        green = green * alpha / 0xff;
+        blue = blue * alpha / 0xff;
+    }
+
+    return (77 * red + 150 * green + 29 * blue) >> 8;
 }
 
 Light::Light() {
     mLights.emplace(Type::ATTENTION, std::bind(&Light::handleWhiteLed, this, std::placeholders::_1, 0));
     mLights.emplace(Type::BACKLIGHT,
-            [](const LightState& state) { set(kLcdBacklightPath, rgbToBrightness(state)); });
+            [](const LightState& state) { set(kLcdBacklightPath, getBrightness(state)); });
     mLights.emplace(Type::BATTERY, std::bind(&Light::handleWhiteLed, this, std::placeholders::_1, 2));
     mLights.emplace(Type::NOTIFICATIONS, std::bind(&Light::handleWhiteLed, this, std::placeholders::_1, 1));
 }
@@ -81,7 +95,7 @@ void Light::handleWhiteLed(const LightState& state, size_t index) {
         }
     }
 
-    int brightness = rgbToBrightness(stateToUse);
+    int brightness = getBrightness(stateToUse);
 
     set(kWhiteLedPath, brightness);
 
