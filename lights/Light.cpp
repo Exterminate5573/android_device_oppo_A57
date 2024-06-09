@@ -31,6 +31,8 @@ const static std::string kWhiteBlinkPath = "/sys/class/leds/white/device/blink";
 const static std::string kWhiteFreqPath = "/sys/class/leds/white/device/grpfreq";
 const static std::string kWhitePwmPath = "/sys/class/leds/white/device/grppwm";
 
+static constexpr int kWhiteLedMaxBrightness = 24; // Observed max brightness
+
 namespace android {
 namespace hardware {
 namespace light {
@@ -97,7 +99,7 @@ void Light::handleWhiteLed(const LightState& state, size_t index) {
 
     int brightness = getBrightness(stateToUse);
 
-    set(kWhiteLedPath, brightness);
+    set(kWhiteLedPath, ((brightness + 1) * kWhiteLedMaxBrightness) >> 8);
 
     int onMs = stateToUse.flashMode == Flash::TIMED ? stateToUse.flashOnMs : 0;
     int offMs = stateToUse.flashMode == Flash::TIMED ? stateToUse.flashOffMs : 0;
