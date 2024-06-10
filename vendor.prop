@@ -149,7 +149,7 @@ vendor.usb.use_ffs_mtp=0
 vendor.usb.use_gadget_hal=0
 
 # Watchdog
-ro.hw_timeout_multiplier=3
+ro.hw_timeout_multiplier=6
 
 # Zygote
 zygote.critical_window.minute=10
