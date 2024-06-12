@@ -108,3 +108,8 @@ vendor.service.qti.ims.enabled=1
 # SoC
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8940
+
+# USB
+vendor.usb.diag.func.name=diag
+vendor.usb.use_ffs_mtp=0
+vendor.usb.use_gadget_hal=0

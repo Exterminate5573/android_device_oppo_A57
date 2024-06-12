@@ -21,6 +21,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/usb/etc \
     $(LOCAL_PATH)
 
 # Screen density
