@@ -261,8 +261,6 @@ on charger
     setprop sys.usb.configfs 1
     start qcom-post-boot
     setprop persist.sys.usb.config mass_storage
-    start vendor.hvdcp_opti
-    start vendor.vm_bms
 
 service adsprpcd /system/vendor/bin/adsprpcd
     class main
@@ -285,16 +283,6 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
-
-service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
-    class main
-    user root
-    group system wakelock
-
-service vendor.vm_bms /vendor/bin/vm_bms
-    class main
-    user root
-    group system wakelock
 
 on boot
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
