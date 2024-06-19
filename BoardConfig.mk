@@ -105,6 +105,7 @@ BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/boot/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/oppo/msm8937
 TARGET_KERNEL_CONFIG := lineageos_A57_defconfig
+TARGET_KERNEL_RECOVERY_CONFIG := lineageos_A57_recovery_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
