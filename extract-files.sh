@@ -64,6 +64,9 @@ function blob_fixup() {
         product/lib/libdpmframework.so|product/lib64/libdpmframework.so)
             "${PATCHELF}" --replace-needed "libhidltransport.so" "libcutils-v29.so" "${2}"
             ;;
+        vendor/bin/mm-qcamera-daemon)
+            sed -i "s/\xca\x56\xbc\xc0/\xca\x56\xd0\xc0/" "${2}"
+            ;;
         vendor/lib/mediadrm/libwvdrmengine.so|vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
@@ -72,6 +75,7 @@ function blob_fixup() {
             ;;
         vendor/lib/libmmcamera2_sensor_modules.so)
             sed -i "s/\/system\/etc\/camera\//\/vendor\/etc\/camera\//g" "${2}"
+            sed -i "s/\xca\x56\xbc\xc0/\xca\x56\xd0\xc0/" "${2}"
             ;;
         vendor/lib/libmmcamera2_stats_modules.so)
             sed -i "s|libandroid.so|libcamshim.so|g" "${2}"
