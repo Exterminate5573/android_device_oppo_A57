@@ -105,6 +105,7 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 
 # Camera - from stock - CPH1701EX_11_A.36_181009
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|f96a99f9ab25a1a74296dd104b25382b53fd82f7
+vendor/lib/libflash_lm3642.so|07d0ed5295e75c84694756f7041650a6c5afa23b
 vendor/lib/libflash_pmic.so|c09d45b1cffc50023b274e34781b99b97acc0ba7
 vendor/lib/libjpegdhw.so|496a61b47dce7d2589ad379fe7f9a745993f8687
 vendor/lib/libjpegdmahw.so|f8fdc40e67213a81c6947f99d08de867c18316bd
