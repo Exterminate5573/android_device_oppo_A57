@@ -20,24 +20,33 @@
 #include <hidl/HidlTransportSupport.h>
 
 #include "KeyDisabler.h"
+#include "KeySwapper.h"
 #include "TouchscreenGesture.h"
 
 using ::android::OK;
 using ::android::sp;
 
 using ::vendor::lineage::touch::V1_0::IKeyDisabler;
+using ::vendor::lineage::touch::V1_0::IKeySwapper;
 using ::vendor::lineage::touch::V1_0::ITouchscreenGesture;
 using ::vendor::lineage::touch::V1_0::implementation::KeyDisabler;
+using ::vendor::lineage::touch::V1_0::implementation::KeySwapper;
 using ::vendor::lineage::touch::V1_0::implementation::TouchscreenGesture;
 
 int main() {
     sp<IKeyDisabler> keyDisablerService = new KeyDisabler();
+    sp<IKeySwapper> keySwapperService = new KeySwapper();
     sp<ITouchscreenGesture> gestureService = new TouchscreenGesture();
 
     android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
 
     if (keyDisablerService->registerAsService() != OK) {
         LOG(ERROR) << "Cannot register key disabler HAL service.";
+        return 1;
+    }
+
+    if (keySwapperService->registerAsService() != OK) {
+        LOG(ERROR) << "Cannot register key swapper HAL service.";
         return 1;
     }
 
