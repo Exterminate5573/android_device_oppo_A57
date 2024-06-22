@@ -1,13 +1,13 @@
 # All unpinned blobs below are extracted from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 
 # ACDB - from stock - CPH1701EX_11_A.36_181009
-etc/acdbdata/16061/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|850d4fa7ba66145bb4efc713d3c2bf78d4ef5df2
-etc/acdbdata/16061/General_cal.acdb:vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|0d604afc047b080dcbb1043506e2d020853c3ad1
-etc/acdbdata/16061/Global_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|8e3421f309963ce1b218a5b391a04b62a2ce536c
-etc/acdbdata/16061/Handset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|81c1866bafdcd461c8b10e181126609844e15b53
-etc/acdbdata/16061/Hdmi_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|278f402966b7a312f8b0f77285b164ea11ff63d7
-etc/acdbdata/16061/Headset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|ce9344781197c7df70e2e7c665a4cb1d8ebebd55
-etc/acdbdata/16061/Speaker_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|fe2289bbae4ed781493d1037dfbd78f3e3de552c
+system/etc/acdbdata/16061/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|850d4fa7ba66145bb4efc713d3c2bf78d4ef5df2
+system/etc/acdbdata/16061/General_cal.acdb:vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|0d604afc047b080dcbb1043506e2d020853c3ad1
+system/etc/acdbdata/16061/Global_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|8e3421f309963ce1b218a5b391a04b62a2ce536c
+system/etc/acdbdata/16061/Handset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|81c1866bafdcd461c8b10e181126609844e15b53
+system/etc/acdbdata/16061/Hdmi_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|278f402966b7a312f8b0f77285b164ea11ff63d7
+system/etc/acdbdata/16061/Headset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|ce9344781197c7df70e2e7c665a4cb1d8ebebd55
+system/etc/acdbdata/16061/Speaker_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|fe2289bbae4ed781493d1037dfbd78f3e3de552c
 
 # ADSP
 vendor/bin/adsprpcd
@@ -71,8 +71,8 @@ vendor/lib64/libqtigef.so
 vendor/lib64/libtinycompress_vendor.so
 
 # Audiosphere
-etc/permissions/audiosphere.xml
-framework/audiosphere.jar
+system/etc/permissions/audiosphere.xml
+system/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib64/soundfx/libasphere.so
 
@@ -104,7 +104,7 @@ vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 
 # Camera - from stock - CPH1701EX_11_A.36_181009
-bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|f96a99f9ab25a1a74296dd104b25382b53fd82f7
+system/bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|f96a99f9ab25a1a74296dd104b25382b53fd82f7|1c401954307686925e9b1bdd77fadad6ffac1d19
 vendor/lib/libflash_lm3642.so|07d0ed5295e75c84694756f7041650a6c5afa23b
 vendor/lib/libflash_pmic.so|c09d45b1cffc50023b274e34781b99b97acc0ba7
 vendor/lib/libjpegdhw.so|496a61b47dce7d2589ad379fe7f9a745993f8687
@@ -122,9 +122,9 @@ vendor/lib/libmmcamera2_mct.so|da86dc56fc8c864ad526c800d41e77f25e930802
 vendor/lib/libmmcamera2_pp_buf_mgr.so|b4a100f90996a1f9297e4850e0da3a56b216b2cc
 vendor/lib/libmmcamera2_pproc_modules.so|15ea26d4332586f3a39f41425dad8c92e516087b
 vendor/lib/libmmcamera2_q3a_core.so|d36165fb297c43123d153830de9c066dee51ccb2
-vendor/lib/libmmcamera2_sensor_modules.so|c081c0872a6d8f0c92d67a9abc061b49516b8cb3
+vendor/lib/libmmcamera2_sensor_modules.so|1c0c4a22646ce196adbccb80f27d2f2e7118d7f0|1d0f45a10f239d4288a172424228e6c2d0109fc2
 vendor/lib/libmmcamera2_stats_algorithm.so|db7b9d067705c836c1e2bab902aaa66b28f8ffd1
-vendor/lib/libmmcamera2_stats_modules.so|1e36de272094ff6c4f645dddd0f5b7cb94e740a3
+vendor/lib/libmmcamera2_stats_modules.so|8858cb9b40ee361a1c5cf77c1821156bd3d0e3c6|1e36de272094ff6c4f645dddd0f5b7cb94e740a3
 vendor/lib/libmmcamera_dbg.so|85e24ae1a6a852a56c50ed8a554bc0896fac7f14
 vendor/lib/libmmcamera_dcrf_lib.so|bf1451710bd287dd4ede9a7780ff3bc5493c20c5
 vendor/lib/libmmcamera_dummyalgo.so|c8a75c7428df423a40b7b31034b53baa70f8769d
@@ -163,8 +163,8 @@ vendor/lib/libchromatix_imx258_4k_preview_bu64244gwz.so|941507c0a61baf43ef763600
 vendor/lib/libchromatix_imx258_4k_preview_truly.so|3850f404c7a95fdf7efe302e4857d0a3e1e87217
 vendor/lib/libchromatix_imx258_4k_video_bu64244gwz.so|85c1fb6cd553fa2d9132c5a2ff2035b5cf123108
 vendor/lib/libchromatix_imx258_4k_video_truly.so|ea4919a440dda2d6419770da77929e092cc71fed
-vendor/lib/libchromatix_imx258_common_panorama.so|26dfe24d6e60312e43147eebe08a34b3e358504a
 vendor/lib/libchromatix_imx258_common.so|99a4901d96e2aafd5d06b067ed3d2f0c1db477fe
+vendor/lib/libchromatix_imx258_common_panorama.so|26dfe24d6e60312e43147eebe08a34b3e358504a
 vendor/lib/libchromatix_imx258_common_video.so|2d1ba7c80db13f66ef25a9b7f7508aa5e77f3b6f
 vendor/lib/libchromatix_imx258_cpp_custom.so|4e4ce1686b2441754ef074156f6f523f7def8267
 vendor/lib/libchromatix_imx258_cpp_face.so|e4183cda12a04c039c2e79b1f021f362ed4bd6cb
@@ -172,45 +172,45 @@ vendor/lib/libchromatix_imx258_cpp_hfr_120.so|9a3be07c07132422918b5b3d85f36cde0b
 vendor/lib/libchromatix_imx258_cpp_hfr_60.so|57826ed5dd660486abb2e94aefbd3ebbe3ca3266
 vendor/lib/libchromatix_imx258_cpp_hfr_90.so|6ec7c86c24c076a1d2fb752691fd51858328f4b0
 vendor/lib/libchromatix_imx258_cpp_liveshot.so|692eb94b9999b4d34fd940c06e97dbbd6698f222
-vendor/lib/libchromatix_imx258_cpp_preview_panorama.so|afd25014220c93f88ff0e4944ecbd91e56bd985a
 vendor/lib/libchromatix_imx258_cpp_preview.so|f69949bf001fad9208f719650f0118e789425c7d
+vendor/lib/libchromatix_imx258_cpp_preview_panorama.so|afd25014220c93f88ff0e4944ecbd91e56bd985a
 vendor/lib/libchromatix_imx258_cpp_preview_special.so|1dcf9671416d981bbf516dcaf39970f3e1556613
 vendor/lib/libchromatix_imx258_cpp_preview_wchat.so|8dd83fa8e3cb8bb38a53162a1621e5ed25605bcf
-vendor/lib/libchromatix_imx258_cpp_snapshot_panorama.so|8c8c5de487b71088d4b2aa67dcb3f89ddd835658
 vendor/lib/libchromatix_imx258_cpp_snapshot.so|3a539641aa4e60b77ec65c4808a025fcc2d3e45b
+vendor/lib/libchromatix_imx258_cpp_snapshot_panorama.so|8c8c5de487b71088d4b2aa67dcb3f89ddd835658
 vendor/lib/libchromatix_imx258_cpp_snapshot_special.so|b35f035e1b700ef391054ecdc684b715d005b08d
-vendor/lib/libchromatix_imx258_cpp_video_4k.so|ffc423321404cac95e8343ae13e06a4d77d9afd5
 vendor/lib/libchromatix_imx258_cpp_video.so|965b8769ff764f6231f2e099b8b0a6959e2dc092
+vendor/lib/libchromatix_imx258_cpp_video_4k.so|ffc423321404cac95e8343ae13e06a4d77d9afd5
 vendor/lib/libchromatix_imx258_default_preview_bu64244gwz.so|00c586c8aedb338c46f40ef644add40b6bb0af02
 vendor/lib/libchromatix_imx258_default_preview_truly.so|7521a8ea1000638dbb8be26fff3ea0a2d65c24e8
+vendor/lib/libchromatix_imx258_default_video.so|fe5f1f9009b90b0aa6ffc51cf6693c6030c58c67
 vendor/lib/libchromatix_imx258_default_video_bu64244gwz.so|20a40658952357916073805c141a239bd1a6e0b8
 vendor/lib/libchromatix_imx258_default_video_cmcc.so|544efa44bf24d4542d9528e87d684733edf874c6
-vendor/lib/libchromatix_imx258_default_video.so|fe5f1f9009b90b0aa6ffc51cf6693c6030c58c67
-vendor/lib/libchromatix_imx258_default_video_truly_cmcc.so|58964679d62ccefa35f286e0b7cd74f5b3683c84
 vendor/lib/libchromatix_imx258_default_video_truly.so|4851b20b4e23281397069ab7a557dc76450ab351
-vendor/lib/libchromatix_imx258_hfr_120_bu64244gwz.so|3c62a6ee9da799c5b31544ac83294ece77f738e0
+vendor/lib/libchromatix_imx258_default_video_truly_cmcc.so|58964679d62ccefa35f286e0b7cd74f5b3683c84
 vendor/lib/libchromatix_imx258_hfr_120.so|d12387e0f9c9f61d781947cd780fd6169eb8794c
-vendor/lib/libchromatix_imx258_hfr_60_bu64244gwz.so|75b9bb38793814198c5426c5aaa0cef92b1d1ebe
+vendor/lib/libchromatix_imx258_hfr_120_bu64244gwz.so|3c62a6ee9da799c5b31544ac83294ece77f738e0
 vendor/lib/libchromatix_imx258_hfr_60.so|737cb024751fb882537546dc97a9f129617235d3
-vendor/lib/libchromatix_imx258_hfr_90_bu64244gwz.so|643237e0ceb6dddf8855237f05be4cadd536a45a
+vendor/lib/libchromatix_imx258_hfr_60_bu64244gwz.so|75b9bb38793814198c5426c5aaa0cef92b1d1ebe
 vendor/lib/libchromatix_imx258_hfr_90.so|dfb010eff33f48e4b03f40572e3fe078b2aa097c
+vendor/lib/libchromatix_imx258_hfr_90_bu64244gwz.so|643237e0ceb6dddf8855237f05be4cadd536a45a
 vendor/lib/libchromatix_imx258_postproc.so|c1131478cec33d6a6006ad75b0cc0eaf02fbda78
 vendor/lib/libchromatix_imx258_preview.so|1fbe7c538fb05e3700c5ca43c468d3bb1894634f
 vendor/lib/libchromatix_imx258_preview_special.so|e87f81a7df69aa7d06eb956cb339170e00d9097a
+vendor/lib/libchromatix_imx258_snapshot.so|8e14645cd48a02cf97da62a84f875538ec1255f7
 vendor/lib/libchromatix_imx258_snapshot_cmcc.so|5ba295ddaa52057bd525ddc6ab1a8fb897d01ede
 vendor/lib/libchromatix_imx258_snapshot_hdr.so|604c9fe0bc31f56753bc1e905fac265130c82091
 vendor/lib/libchromatix_imx258_snapshot_panorama.so|97471d0acf057cc849aa3a91950bf4f4757eec26
-vendor/lib/libchromatix_imx258_snapshot.so|8e14645cd48a02cf97da62a84f875538ec1255f7
 vendor/lib/libchromatix_imx258_video_4k.so|3ae99e9f66e9b7424351fa3804b6b05fbf37823b
 vendor/lib/libchromatix_imx258_zsl_preview_16_9.so|04fa4c3199bba6ee6ea2717d27f446ed6c0a6cdc
 vendor/lib/libchromatix_imx258_zsl_preview_bu64244gwz.so|f374d6b769183e0cb346654d94c2999c004605a5
 vendor/lib/libchromatix_imx258_zsl_preview_cmcc.so|aa873c458692d3cacf8919ba5ae9cc06a20bd99a
 vendor/lib/libchromatix_imx258_zsl_preview_panorama.so|c302dd92948f1e067fa874e0816d4fbc14e92f4f
 vendor/lib/libchromatix_imx258_zsl_preview_special.so|21d72569ec5b695f51079f6bd41b90702f7a027d
+vendor/lib/libchromatix_imx258_zsl_preview_truly.so|f9ed86da9080213193745810460aa106266a1a39
 vendor/lib/libchromatix_imx258_zsl_preview_truly_16_9.so|5b73a6ac4cc51ec3f6413270542e3892933a279b
 vendor/lib/libchromatix_imx258_zsl_preview_truly_cmcc.so|de9d2ee6663600ab96ad958fe93c09b4ea2e9a25
 vendor/lib/libchromatix_imx258_zsl_preview_truly_panorama.so|ef662c9382d58fb6bb8c362a30c18dc7205d87f8
-vendor/lib/libchromatix_imx258_zsl_preview_truly.so|f9ed86da9080213193745810460aa106266a1a39
 vendor/lib/libchromatix_imx258_zsl_preview_truly_special.so|912cb1a297f36a17382c0100539ee6a60b1d7592
 vendor/lib/libchromatix_imx258_zsl_video_bu64244gwz.so|62c7bd0343a45b1701577e49920eaaa42d612e80
 vendor/lib/libchromatix_s5k3p3sp_a3_default_preview_q3p3maa.so|60841261079440422d0f9a3fccc9c6e90039a85a
@@ -218,33 +218,33 @@ vendor/lib/libchromatix_s5k3p3sp_a3_default_video_q3p3maa.so|a4e11ceae3b5895a4ae
 vendor/lib/libchromatix_s5k3p3sp_a3_hfr_120_q3p3maa.so|ab2bef915c16ea37e619714659732292441f16a2
 vendor/lib/libchromatix_s5k3p3sp_a3_hfr_60_q3p3maa.so|a6ad0528cc5dd8e2f6b4c37c02f64fe629b1f485
 vendor/lib/libchromatix_s5k3p3sp_a3_hfr_90_q3p3maa.so|88013617c4947af959428d40e7cd35be191c72da
-vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_panorama_ofilm.so|35b76e0cbfefbaee7ebe3399c729ca5d06610ae2
 vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_panorama.so|beef8c3da57548933a5ad2aa05aaa0528b244b22
-vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_q3p3maa_fb_ofilm.so|17c3fbfaf2d5e1ab06e023adb59efdb01543cd29
-vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_q3p3maa_fb.so|12f890e46f9c7e5f178c308f9bcaa693682e6dcc
-vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_q3p3maa_ofilm.so|737ffb55cd06e9ed3f676b09b3da265eda5f900a
+vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_panorama_ofilm.so|35b76e0cbfefbaee7ebe3399c729ca5d06610ae2
 vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_q3p3maa.so|08b03858c67a8e70961493ba65085ed1800c9aaf
-vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_special_ofilm.so|78300273fc1e9a0248f83aea762434d2afb70cac
+vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_q3p3maa_fb.so|12f890e46f9c7e5f178c308f9bcaa693682e6dcc
+vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_q3p3maa_fb_ofilm.so|17c3fbfaf2d5e1ab06e023adb59efdb01543cd29
+vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_q3p3maa_ofilm.so|737ffb55cd06e9ed3f676b09b3da265eda5f900a
 vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_special.so|6b7440db8aedb3ca15d17d4bcdb00fea865fd928
-vendor/lib/libchromatix_s5k3p3sp_a3_zsl_video_q3p3maa_ofilm.so|b905aecb3a8ae83079c4238497726580d1f68168
+vendor/lib/libchromatix_s5k3p3sp_a3_zsl_preview_special_ofilm.so|78300273fc1e9a0248f83aea762434d2afb70cac
 vendor/lib/libchromatix_s5k3p3sp_a3_zsl_video_q3p3maa.so|c6240a549f189c4c1abede8dbe0d7923165110f4
+vendor/lib/libchromatix_s5k3p3sp_a3_zsl_video_q3p3maa_ofilm.so|b905aecb3a8ae83079c4238497726580d1f68168
 vendor/lib/libchromatix_s5k3p3sp_common.so|fab94b9b2ad3357f9e918f68c5cd609bb4565aa4
 vendor/lib/libchromatix_s5k3p3sp_cpp_flash_snapshot.so|05c15f16547973d9c70bd89d614acd31fff37a2b
 vendor/lib/libchromatix_s5k3p3sp_cpp_hfr_120.so|7b3b33e9c0b4bfede27038c296356756e706213d
 vendor/lib/libchromatix_s5k3p3sp_cpp_hfr_60.so|ce2f48444eee63909103b845471d9edea6ceb2fc
 vendor/lib/libchromatix_s5k3p3sp_cpp_hfr_90.so|45dd944324b8fb4f3b2e2cd434d33f3dc3a76368
 vendor/lib/libchromatix_s5k3p3sp_cpp_liveshot.so|9aaebd295212950ab1e895801c7a498b5d1cc3dd
-vendor/lib/libchromatix_s5k3p3sp_cpp_preview_fb.so|b06dfe04a592b30aa0341e47974905ac92fb6d6b
 vendor/lib/libchromatix_s5k3p3sp_cpp_preview.so|5b4708524780be9394ca4b0e8a6019fb6eb31b42
+vendor/lib/libchromatix_s5k3p3sp_cpp_preview_fb.so|b06dfe04a592b30aa0341e47974905ac92fb6d6b
 vendor/lib/libchromatix_s5k3p3sp_cpp_preview_special.so|59d7be04900c8fae02a5fa1154d668868b43029b
+vendor/lib/libchromatix_s5k3p3sp_cpp_snapshot.so|ecad5fac503277881fe3d515ad347f4b80851619
 vendor/lib/libchromatix_s5k3p3sp_cpp_snapshot_fb.so|83b275725f5a538f1f157d4662a1808ec01484cd
 vendor/lib/libchromatix_s5k3p3sp_cpp_snapshot_gif.so|15e8418e3a96e3b34dc1f96d7fc4677c32322b44
-vendor/lib/libchromatix_s5k3p3sp_cpp_snapshot.so|ecad5fac503277881fe3d515ad347f4b80851619
 vendor/lib/libchromatix_s5k3p3sp_cpp_snapshot_special.so|0e9c51d2f4891430e80b90ad47b3234b494ff3fa
 vendor/lib/libchromatix_s5k3p3sp_cpp_video.so|c41f683928d8b2ff533dd4fcc3031594fc6c286f
-vendor/lib/libchromatix_s5k3p3sp_default_video_cmcc_ofilm.so|459081420cc839e3f0755ab3447f7aec6905d5db
-vendor/lib/libchromatix_s5k3p3sp_default_video_cmcc.so|cba584628d6b47f00e3329cd970b0872a1f98272
 vendor/lib/libchromatix_s5k3p3sp_default_video.so|a5c9143537b55e4e989ade0809918580cdefb374
+vendor/lib/libchromatix_s5k3p3sp_default_video_cmcc.so|cba584628d6b47f00e3329cd970b0872a1f98272
+vendor/lib/libchromatix_s5k3p3sp_default_video_cmcc_ofilm.so|459081420cc839e3f0755ab3447f7aec6905d5db
 vendor/lib/libchromatix_s5k3p3sp_hfr_120.so|58b3354883098da0bf193d25580c3d4dae658c04
 vendor/lib/libchromatix_s5k3p3sp_hfr_60.so|4d6ec7992016c7819226bc4b9a8051e7a6a09f7d
 vendor/lib/libchromatix_s5k3p3sp_hfr_90.so|b9d57598c7eeaa15c5ad297daf32811efbc8b228
@@ -252,21 +252,21 @@ vendor/lib/libchromatix_s5k3p3sp_liveshot.so|7fd8ea3557ddd4689657004a171c96f066f
 vendor/lib/libchromatix_s5k3p3sp_postproc.so|15dbf56b4fddc5a71bd7d5a905a7238602d724fb
 vendor/lib/libchromatix_s5k3p3sp_preview.so|e55964b64e957fa4e96b8861ebcbb6a0e76ab303
 vendor/lib/libchromatix_s5k3p3sp_preview_special.so|20661785e74a2136a7c7e7006caedf1828bc5f0f
+vendor/lib/libchromatix_s5k3p3sp_snapshot.so|266c93948008a35078c6ddd4572c61ce18babfe6
 vendor/lib/libchromatix_s5k3p3sp_snapshot_cmcc.so|784e5cb74e3e1a4a3bc214bf2f3f6ae61c16004f
 vendor/lib/libchromatix_s5k3p3sp_snapshot_fb.so|76b0332de511b823ae71a588f839e3f355803474
-vendor/lib/libchromatix_s5k3p3sp_snapshot.so|266c93948008a35078c6ddd4572c61ce18babfe6
-vendor/lib/libchromatix_s5k3p3sp_zsl_preview_cmcc_ofilm.so|aff0e069be1b8c52979dc9ee0e6b119345e83c43
 vendor/lib/libchromatix_s5k3p3sp_zsl_preview_cmcc.so|a00bb96900748ae60d7a98781694ae66074d85d5
+vendor/lib/libchromatix_s5k3p3sp_zsl_preview_cmcc_ofilm.so|aff0e069be1b8c52979dc9ee0e6b119345e83c43
 
 # Camera configs - from stock - CPH1701EX_11_A.36_181009
-etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml|c57c495ea72c00a5f6212a195ed9212e98910800
-etc/camera/imx258_bear_chromatix.xml:vendor/etc/camera/imx258_bear_chromatix.xml|211a55da57e93c555e12f4199ed480c068a166e4
-etc/camera/imx258_chromatix.xml:vendor/etc/camera/imx258_chromatix.xml|a8bccbf34fa999c45562f4d9d31c60575bb8b65b
-etc/camera/imx258_mono_bear_chromatix.xml:vendor/etc/camera/imx258_mono_bear_chromatix.xml|81de051d0813deb56eb522e8e7cb1edbe9ee3afb
-etc/camera/imx258_mono_chromatix.xml:vendor/etc/camera/imx258_mono_chromatix.xml|cee93deeca626270dcbd515656c5bae4a7a02da5
-etc/camera/imx258_truly_chromatix.xml:vendor/etc/camera/imx258_truly_chromatix.xml|40a4961a130d14485d4b7bac35c1d88278641a09
-etc/camera/s5k3p3sp_chromatix.xml:vendor/etc/camera/s5k3p3sp_chromatix.xml|c8104e9bcf3f1533a762aacb3d4814429a1a3e28
-etc/camera/s5k3p3sp_ofilm_chromatix.xml:vendor/etc/camera/s5k3p3sp_ofilm_chromatix.xml|fdbeab8c1d90c1532613584e5c9c6011f60d770b
+system/etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml|c57c495ea72c00a5f6212a195ed9212e98910800
+system/etc/camera/imx258_bear_chromatix.xml:vendor/etc/camera/imx258_bear_chromatix.xml|211a55da57e93c555e12f4199ed480c068a166e4
+system/etc/camera/imx258_chromatix.xml:vendor/etc/camera/imx258_chromatix.xml|a8bccbf34fa999c45562f4d9d31c60575bb8b65b
+system/etc/camera/imx258_mono_bear_chromatix.xml:vendor/etc/camera/imx258_mono_bear_chromatix.xml|81de051d0813deb56eb522e8e7cb1edbe9ee3afb
+system/etc/camera/imx258_mono_chromatix.xml:vendor/etc/camera/imx258_mono_chromatix.xml|cee93deeca626270dcbd515656c5bae4a7a02da5
+system/etc/camera/imx258_truly_chromatix.xml:vendor/etc/camera/imx258_truly_chromatix.xml|40a4961a130d14485d4b7bac35c1d88278641a09
+system/etc/camera/s5k3p3sp_chromatix.xml:vendor/etc/camera/s5k3p3sp_chromatix.xml|684a4ec4cacf668436474424145cbf0fa9abe18d|c8104e9bcf3f1533a762aacb3d4814429a1a3e28
+system/etc/camera/s5k3p3sp_ofilm_chromatix.xml:vendor/etc/camera/s5k3p3sp_ofilm_chromatix.xml|f7f289faee84baa0d806ebba7facd92be202f214|fdbeab8c1d90c1532613584e5c9c6011f60d770b
 
 # Camera eeproms - from stock - CPH1701EX_11_A.36_181009
 vendor/lib/libmmcamera_eeprom_util.so|2d8af8eb6b054a8a71062b5e3d87cebcc1c0ef82
@@ -323,9 +323,9 @@ vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 
 # CNE
-etc/cne/Nexus/ATT/ATT_profiles.xml
-etc/cne/Nexus/ROW/ROW_profiles.xml
-etc/cne/Nexus/VZW/VZW_profiles.xml
+system/etc/cne/Nexus/ATT/ATT_profiles.xml
+system/etc/cne/Nexus/ROW/ROW_profiles.xml
+system/etc/cne/Nexus/VZW/VZW_profiles.xml
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
 product/framework/com.quicinc.cne.api-V1.1-java.jar
@@ -416,7 +416,7 @@ vendor/lib64/libfastrpc_utf_stub.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
 # DPM
-framework/tcmclient.jar
+system/framework/tcmclient.jar
 product/bin/dpmd:system_ext/bin/dpmd
 product/etc/dpm/dpm.conf:system_ext/etc/dpm/dpm.conf
 product/etc/init/dpmd.rc:system_ext/etc/init/dpmd.rc
@@ -459,29 +459,29 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
 # Fingerprint - FPC - from stock - CPH1701EX_11_A.36_181009
-lib64/hw/fingerprint.msm8937.so:vendor/lib64/hw/fingerprint.msm8937.so|e5bda11ba1634777a33b896c37145723f4bedfd2
-lib64/libalipay_factory.so:vendor/lib64/libalipay_factory.so|1e481a2ddd54fd8fde4fce2107696df189dc7b41
-lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so|cf54ba9948fc2e3e82b723224733242a5aaa1176
+system/lib64/hw/fingerprint.msm8937.so:vendor/lib64/hw/fingerprint.msm8937.so|e5bda11ba1634777a33b896c37145723f4bedfd2
+system/lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so|1e2ebfa28a378c0bd0d4d0f3836125623c84a31e|cf54ba9948fc2e3e82b723224733242a5aaa1176
+system/lib64/libalipay_factory.so:vendor/lib64/libalipay_factory.so|8637b01c206cc2b476e333f6e5549c032c8d238b|1e481a2ddd54fd8fde4fce2107696df189dc7b41
 
 # Fingerprint - Alipay firmware - from stock - CPH1701EX_11_A.36_181009
-etc/firmware/alipay.b00:vendor/firmware/alipay.b00|9dd173e4faceb2b276d4847dbb5b2a1f397de2e4
-etc/firmware/alipay.b01:vendor/firmware/alipay.b01|69f22449bfad7a40faed408eb348697f9dde6605
-etc/firmware/alipay.b02:vendor/firmware/alipay.b02|e2886279537ea48c80e3182eeef434c1eae2fede
-etc/firmware/alipay.b03:vendor/firmware/alipay.b03|a862f7334373dd04778983e2d44204ae9c65684b
-etc/firmware/alipay.b04:vendor/firmware/alipay.b04|b9d138bd786ba93efaebdf62aa8859f587255b02
-etc/firmware/alipay.b05:vendor/firmware/alipay.b05|648187fbf1a063bb4a637d99b2866c057ba99fcf
-etc/firmware/alipay.b06:vendor/firmware/alipay.b06|aaa8b57e75a45ec6193d18a601f7115613072b79
-etc/firmware/alipay.mdt:vendor/firmware/alipay.mdt|01232028fe96f9562f930cd27c8482eb462b4fd8
+system/etc/firmware/alipay.b00:vendor/firmware/alipay.b00|9dd173e4faceb2b276d4847dbb5b2a1f397de2e4
+system/etc/firmware/alipay.b01:vendor/firmware/alipay.b01|69f22449bfad7a40faed408eb348697f9dde6605
+system/etc/firmware/alipay.b02:vendor/firmware/alipay.b02|e2886279537ea48c80e3182eeef434c1eae2fede
+system/etc/firmware/alipay.b03:vendor/firmware/alipay.b03|a862f7334373dd04778983e2d44204ae9c65684b
+system/etc/firmware/alipay.b04:vendor/firmware/alipay.b04|b9d138bd786ba93efaebdf62aa8859f587255b02
+system/etc/firmware/alipay.b05:vendor/firmware/alipay.b05|648187fbf1a063bb4a637d99b2866c057ba99fcf
+system/etc/firmware/alipay.b06:vendor/firmware/alipay.b06|aaa8b57e75a45ec6193d18a601f7115613072b79
+system/etc/firmware/alipay.mdt:vendor/firmware/alipay.mdt|01232028fe96f9562f930cd27c8482eb462b4fd8
 
 # Fingerprint - FPC firmware - from stock - CPH1701EX_11_A.36_181009
-etc/firmware/fingerprint.b00:vendor/firmware/fingerprint.b00|22912d59d481d844b58079ed32a7e90af8a1bcaa
-etc/firmware/fingerprint.b01:vendor/firmware/fingerprint.b01|83d10cf370f12e99ed21a095bdf78640370625bb
-etc/firmware/fingerprint.b02:vendor/firmware/fingerprint.b02|b7f8565c88f65d0a974c52ba5edf921ece9625c5
-etc/firmware/fingerprint.b03:vendor/firmware/fingerprint.b03|f5fb7954df0af21f55ac00769c400c0ff90b9420
-etc/firmware/fingerprint.b04:vendor/firmware/fingerprint.b04|d4924a57836d062463aa4caaa497669f03de372c
-etc/firmware/fingerprint.b05:vendor/firmware/fingerprint.b05|74a2339683cb21e20267c092900ad9c942b816a7
-etc/firmware/fingerprint.b06:vendor/firmware/fingerprint.b06|341f188722aab317d78fdbdfdd0fbe52b2c0f25f
-etc/firmware/fingerprint.mdt:vendor/firmware/fingerprint.mdt|03a3bb29a26f97dda8abdb3b7a1533e0cc1b10f5
+system/etc/firmware/fingerprint.b00:vendor/firmware/fingerprint.b00|22912d59d481d844b58079ed32a7e90af8a1bcaa
+system/etc/firmware/fingerprint.b01:vendor/firmware/fingerprint.b01|83d10cf370f12e99ed21a095bdf78640370625bb
+system/etc/firmware/fingerprint.b02:vendor/firmware/fingerprint.b02|b7f8565c88f65d0a974c52ba5edf921ece9625c5
+system/etc/firmware/fingerprint.b03:vendor/firmware/fingerprint.b03|f5fb7954df0af21f55ac00769c400c0ff90b9420
+system/etc/firmware/fingerprint.b04:vendor/firmware/fingerprint.b04|d4924a57836d062463aa4caaa497669f03de372c
+system/etc/firmware/fingerprint.b05:vendor/firmware/fingerprint.b05|74a2339683cb21e20267c092900ad9c942b816a7
+system/etc/firmware/fingerprint.b06:vendor/firmware/fingerprint.b06|341f188722aab317d78fdbdfdd0fbe52b2c0f25f
+system/etc/firmware/fingerprint.mdt:vendor/firmware/fingerprint.mdt|03a3bb29a26f97dda8abdb3b7a1533e0cc1b10f5
 
 # FM - from X00PD - ASUS_X00PD-user 10 QKQ1.191002.002 17.00.2003.23-20200401 release-keys
 lib64/fm_helium.so|10bf2489995d3717ebb0f91c73ffec3504fd0159
@@ -683,38 +683,38 @@ vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
 # Perf - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
-system/lib/libqti-perfd-client_system.so|c021b1c1065161a15c2202747ef6738e89cd1b7b
-system/lib/libqti-util_system.so|3df0aa4365a085ab64ff1ae226bf724d0815aa25
-system/lib/libqti_performance.so|2a9f885d001661a1a5b8543c4d592afef34f7662
-system/lib64/libqti-perfd-client_system.so|4390474d5549c02f53911243c972968244f29391
-system/lib64/libqti-util_system.so|c3717d35a42c9d38e2ba18dac6756e3e9845d84f
-system/lib64/libqti_performance.so|2a6bfefe6eb7a68f0774774f5de7f363885c3d87
-vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|ed731317514e1992ac919a49a1f98e14e7a60eff
+system/lib/libqti-perfd-client_system.so|cd1365a206ee4a97e22e51e705073a6972b462f8
+system/lib/libqti-util_system.so|46db5679c348c43461a0845da96f6dedf3258677
+system/lib/libqti_performance.so|5f652f43b59c0cc89371d19941dfed3ca1b929e9
+system/lib64/libqti-perfd-client_system.so|52f9bd66e51d3f20c40eb018772052b98e004124
+system/lib64/libqti-util_system.so|d77aa885b200c4251d751d8a49f73f4f430a95e3
+system/lib64/libqti_performance.so|9f8c3f5ebb46a3b8cb6047970e6cf4891966c526
+vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|07b1b78015ee6d8d12ae38a5c7a3253567ee97e8
 vendor/bin/msm_irqbalance|b5e55b4b0934b65b7dd5d2201f9a70f6f77a4e7c
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
 vendor/etc/perf/commonresourceconfigs.xml|d9fc3b49481536d6c7a25eb13f9f1d52d3ee8ff1
 vendor/etc/perf/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
 vendor/etc/perf/perf-profile1.conf|5ce649b26b71048734b797af7340d9f7f7b83ca0
-vendor/etc/perf/perfboostsconfig.xml|3ccf3e4eb4ddfad12b8cfbe6fe62b14e970d8fe5
-vendor/etc/perf/perfconfigstore.xml|b6bd028c054d7e50ebef81dc1cd34b58e91e6890
-vendor/etc/perf/targetconfig.xml|6106b22017b4e759c5804d12f439d2d09d567706
-vendor/etc/perf/targetresourceconfigs.xml|1817b8766a5b70c40c302f0add16a783fde135a4
-vendor/lib/libperfgluelayer.so|3c58ba816cf4480357b1ed934d2b44f17d00449f
-vendor/lib/libqti-perfd-client.so|eb81a99bab35f29b7977bde878ea2a29e2abe18c
-vendor/lib/libqti-perfd.so|bc6f03e63c9172c256c4b87ffd045667168adb1c
-vendor/lib/libqti-util.so|da7cfbe08e99dfa77fb29f06878b5d676af40d09
-vendor/lib/libqti-utils.so|b910050eb3a0f75a3624fc9987f2e139198d7f3e
-vendor/lib/libperfconfig.so|a940ff08c5207ca4ba7e3c9f97c51b98da8bb0d0
+vendor/etc/perf/perfboostsconfig.xml|429d7e2032a494eff1f8d0c039fa839082145b59
+vendor/etc/perf/perfconfigstore.xml|207ff980c296f4935928dd2f06e085b33bf59755
+vendor/etc/perf/targetconfig.xml|aa20c25397df1455206965737f82d44d44430e45
+vendor/etc/perf/targetresourceconfigs.xml|d9f9815764725df55e748bf4af4829e609dac853
+vendor/lib/libperfconfig.so|11f6ec2d7da51872dad2f016a6638df209adca14
+vendor/lib/libperfgluelayer.so|5c9db256d92ddf5bce65941f2cad5eaeb4f028fd
+vendor/lib/libqti-perfd-client.so|ca0e9b4e029985949b8c0fcc9e9a7d543a7a789e
+vendor/lib/libqti-perfd.so|855dd68c8a277c8b4787579a935a23bead62dd59
+vendor/lib/libqti-util.so|f1a4d655ee827d791447f303e59197e7271fafb5
+vendor/lib/libqti-utils.so|8e5322144620c5b4ec9fef6402fc0b09160c1f90
 vendor/lib64/libadaptlaunch.so|c28f34fbd6614b1f15a8f4845fb631f5afe16c00
-vendor/lib64/liblearningmodule.so|b638d727bb29401b7c28355b1497a3e9fef6c151
+vendor/lib64/liblearningmodule.so|16bc168a8ff739b7e54a9c089a5695471f1e9910
 vendor/lib64/libmeters-ns.so|bce04b8dad64dc7e4ad6114bc8771bf5c6f90464
-vendor/lib64/libmeters.so|24bb1b67813790b63464f434f0dcc425a5064c52
-vendor/lib64/libperfgluelayer.so|ba4f771f239303a96b118cacdb38f6ce985b0e9b
-vendor/lib64/libqti-perfd-client.so|cfdfe3d443085feae4cf4af398d711722b904388
-vendor/lib64/libqti-perfd.so|7a5724fcb4a5a7a74d58e2641c051934b038905d
-vendor/lib64/libqti-util.so|4911109f327c4bf9d1d34acc14082f78e69b4ccb
-vendor/lib64/libqti-utils.so|c74e0e5c650ecb9a0bb8e6fd7d95fc1e521597f6
-vendor/lib64/libperfconfig.so|c2929d897e116a0f775213e5ddfb785b313d8fd5
+vendor/lib64/libmeters.so|3930232951d085b3f0b21f97a5f38f1696c76a8c
+vendor/lib64/libperfconfig.so|d590b6ce31c8b2158a3653c9248f5c12139d27cd
+vendor/lib64/libperfgluelayer.so|269245742c7628539e9d86a1fa4b9ba2551774e3
+vendor/lib64/libqti-perfd-client.so|754fc2b05a5c81825108cfcdfc036156216592a9
+vendor/lib64/libqti-perfd.so|f252bc957f45dd389463abe97be3f0f129da8b67
+vendor/lib64/libqti-util.so|e790b62bb198442145fcba20c2dc61d182c45a47
+vendor/lib64/libqti-utils.so|6be58a4928484c5cf0b2ebf25944d4962958801a
 
 # Peripheral manager
 vendor/bin/pm-proxy
@@ -723,8 +723,8 @@ vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
 # Postprocessing
-etc/permissions/com.qti.snapdragon.sdk.display.xml
-framework/com.qti.snapdragon.sdk.display.jar
+system/etc/permissions/com.qti.snapdragon.sdk.display.xml
+system/framework/com.qti.snapdragon.sdk.display.jar
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti
 vendor/bin/mm-pp-dpps
@@ -749,8 +749,8 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # QMI
-etc/permissions/qti_libpermissions.xml
-etc/permissions/qti_permissions.xml
+system/etc/permissions/qti_libpermissions.xml
+system/etc/permissions/qti_permissions.xml
 vendor/bin/irsc_util
 vendor/etc/sec_config
 vendor/lib/libdiag.so
@@ -870,7 +870,7 @@ vendor/lib64/libril-qc-hal-qmi.so
 vendor/lib64/qcrild_librilutils.so
 
 # Radio - IMS
-etc/permissions/com.qualcomm.qti.imscmservice.xml
+system/etc/permissions/com.qualcomm.qti.imscmservice.xml
 -product/app/imssettings/imssettings.apk:system_ext/app/imssettings/imssettings.apk
 -product/app/uceShimService/uceShimService.apk:system_ext/app/uceShimService/uceShimService.apk
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
@@ -958,7 +958,7 @@ vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.ssc.so
 
 # Sensors config - from stock - CPH1701EX_11_A.36_181009
-etc/sensors/sensor_def_16061.conf:vendor/etc/sensors/sensor_def_qcomdev.conf|ff046f6a8a6b2a2e1b47c10e6985ce78ee8e9f92
+system/etc/sensors/sensor_def_16061.conf:vendor/etc/sensors/sensor_def_qcomdev.conf|ff046f6a8a6b2a2e1b47c10e6985ce78ee8e9f92
 
 # Thermal
 vendor/bin/thermal-engine
