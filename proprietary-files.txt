@@ -483,11 +483,11 @@ system/etc/firmware/fingerprint.b05:vendor/firmware/fingerprint.b05|74a2339683cb
 system/etc/firmware/fingerprint.b06:vendor/firmware/fingerprint.b06|341f188722aab317d78fdbdfdd0fbe52b2c0f25f
 system/etc/firmware/fingerprint.mdt:vendor/firmware/fingerprint.mdt|03a3bb29a26f97dda8abdb3b7a1533e0cc1b10f5
 
-# FM - from X00PD - ASUS_X00PD-user 10 QKQ1.191002.002 17.00.2003.23-20200401 release-keys
-lib64/fm_helium.so|10bf2489995d3717ebb0f91c73ffec3504fd0159
-lib64/libfm-hci.so|a281726ca32cd52609c9b3e65345eb7dd868339c
-product/lib64/vendor.qti.hardware.fm@1.0.so|c190ec6ecb995b556c30a214a8a7cf4894e72e5f
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|e5a0fff3d1f5b5ba8c10022cb06036971d48be0b
+# FM
+system/lib64/fm_helium.so
+system/lib64/libfm-hci.so
+product/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.0-service-qti
