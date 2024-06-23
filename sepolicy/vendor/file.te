@@ -15,3 +15,9 @@ type proc_touchpanel, fs_type, proc_type;
 type rild_file, file_type, vendor_file_type;
 
 type proc_boot_reason, fs_type, proc_type;
+
+type proc_oppo_camera, fs_type, proc_type;
+
+type proc_oppo_info, fs_type, proc_type;
+
+type proc_flashlight, fs_type, proc_type;
