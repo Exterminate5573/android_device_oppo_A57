@@ -32,5 +32,3 @@ allow hal_fingerprint_default fingerprint_data_file:dir create_dir_perms;
 allow hal_fingerprint_default fingerprint_data_file:file create_file_perms;
 
 allow hal_fingerprint_default system_data_file:dir create_dir_perms;
-
-set_prop(hal_fingerprint_default, fingerprint_prop);
