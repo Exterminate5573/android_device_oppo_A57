@@ -545,9 +545,8 @@ vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
-# Gatekeeper
-vendor/lib/hw/gatekeeper.msm8953.so:vendor/lib/hw/gatekeeper.msm8937.so
-vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so
+# Gatekeeper - from olive - Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.5.0.QCNCNXM:user/release-keys
+vendor/lib64/hw/gatekeeper.msm8937.so|7be56a403c30f093865f08bf0f0335aeb99ec7fd
 
 # Graphics
 vendor/lib/egl/eglSubDriverAndroid.so
@@ -613,9 +612,8 @@ vendor/firmware/a506_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
 
-# Keystore
-vendor/lib/hw/keystore.msm8953.so:vendor/lib/hw/keystore.msm8937.so
-vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so
+# Keystore - from olive - Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.5.0.QCNCNXM:user/release-keys
+vendor/lib64/hw/keystore.msm8937.so|0942d9308cc9dfbc305dd0b9e8b1e3ba75ebae38
 
 # Latency
 product/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
