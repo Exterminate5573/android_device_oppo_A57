@@ -10,13 +10,6 @@
 /dev/block/platform/soc/7824900.sdhci/by-name/sbl1                          u:object_r:custom_ab_block_device:s0
 /dev/block/platform/soc/7824900.sdhci/by-name/tz                            u:object_r:custom_ab_block_device:s0
 
-# Fingerprint - data
-/dev/socket/fpce(/.*)?                                                      u:object_r:fingerprint_socket:s0
-/data/fpc(/.*)?                                                             u:object_r:fingerprint_data_file:s0
-
-# Fingerprint - device
-/sys/devices(/platform)?/soc/soc:fpc_fpc1020(/.*)?                          u:object_r:fingerprint_sysfs:s0
-
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.A57   u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.A57                     u:object_r:hal_light_default_exec:s0
@@ -39,6 +32,4 @@
 /(vendor|system/vendor)/radio/qcril_database/qcril.db                       u:object_r:rild_file:s0
 
 # Rootdir
-/avb(/.*)?                                                                  u:object_r:avb_file:s0
-/bt_firmware                                                                u:object_r:bt_firmware_file:s0
 /persist(/.*)?                                                              u:object_r:mnt_vendor_file:s0
