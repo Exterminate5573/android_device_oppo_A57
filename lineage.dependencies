@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_kernel_oppo_msm8937",
+    "target_path": "kernel/oppo/msm8937"
+  },
+]
