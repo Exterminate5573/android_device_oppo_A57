@@ -166,6 +166,10 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml
 
+# Doze
+PRODUCT_PACKAGES += \
+    OPPODoze
+
 # DPM
 PRODUCT_PACKAGES += \
     libshim_dpmframework
