@@ -1,22 +1,17 @@
-# Boot reason
-genfscon proc /sys/kernel/boot_reason                                               u:object_r:proc_boot_reason:s0
-
 # Camera
 genfscon proc /front_eeprom_info                    u:object_r:proc_oppo_camera:s0
 genfscon proc /rear_eeprom_info                     u:object_r:proc_oppo_camera:s0
 genfscon proc /qcom_flash                           u:object_r:proc_flashlight:s0
 
 # Fingerprint
-genfscon sysfs /devices/soc/soc:fpc_fpc1020         u:object_r:fingerprint_sysfs:s0
+genfscon sysfs /devices/platform/soc/soc:fpc_fpc1020         u:object_r:fingerprint_sysfs:s0
 
 # OPPO specifics
 genfscon proc /devinfo                              u:object_r:proc_oppo_info:s0
 genfscon proc /oppoVersion                          u:object_r:proc_oppo_info:s0
 
 # Power
-genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply                         u:object_r:sysfs_batteryinfo:s0
-genfscon sysfs /devices/soc/msm-bcl-19/power_supply                                 u:object_r:sysfs_batteryinfo:s0
-genfscon proc /touchpanel                                                           u:object_r:proc_touchpanel:s0
+genfscon proc /touchpanel                           u:object_r:proc_touchpanel:s0
 
 # Rmt
-genfscon debugfs /rmt_storage                                                       u:object_r:debugfs_rmt:s0
+genfscon debugfs /rmt_storage                       u:object_r:debugfs_rmt:s0

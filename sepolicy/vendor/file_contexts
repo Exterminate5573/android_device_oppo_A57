@@ -20,10 +20,10 @@
 /(vendor|system/vendor)/usr/keylayout(/.*)?                                 u:object_r:vendor_keylayout_file:s0
 
 # LED
-/sys/devices/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/leds(/.*)?        u:object_r:sysfs_leds:s0
-/sys/devices/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/blink             u:object_r:sysfs_leds:s0
-/sys/devices/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/grpfreq           u:object_r:sysfs_leds:s0
-/sys/devices/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/grppwm            u:object_r:sysfs_leds:s0
+/sys/devices/platform/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/leds(/.*)?        u:object_r:sysfs_leds:s0
+/sys/devices/platform/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/blink             u:object_r:sysfs_leds:s0
+/sys/devices/platform/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/grpfreq           u:object_r:sysfs_leds:s0
+/sys/devices/platform/soc/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/grppwm            u:object_r:sysfs_leds:s0
 
 # Location
 /data/vendor/location/xtra/socket_hal_xtra                                  u:object_r:location_socket:s0
