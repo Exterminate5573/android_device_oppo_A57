@@ -13,5 +13,8 @@ genfscon proc /oppoVersion                          u:object_r:proc_oppo_info:s0
 # Power
 genfscon proc /touchpanel                           u:object_r:proc_touchpanel:s0
 
+# Power supply
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:qcom,qpnp-smbcharger/power_supply/dc u:object_r:sysfs_battery_supply:s0
+
 # Rmt
 genfscon debugfs /rmt_storage                       u:object_r:debugfs_rmt:s0
