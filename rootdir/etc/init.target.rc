@@ -251,3 +251,6 @@ on boot
 on property:sys.boot_completed=1 && property:sys.ftrace.debug.on=0
     write /d/tracing/tracing_on 0
     write /sys/kernel/debug/tracing/tracing_on 0
+
+on property:sys.boot_completed=1 && property:vendor.usb.uvc.function.init=1
+    write /config/usb_gadget/g1/functions/uvc.0/streaming_maxpacket ${vendor.usb.uvc.payload_transfer_size}
