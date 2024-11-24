@@ -20,4 +20,4 @@ It was announced on November, 2016.
 | Front Camera            | 16 MP, LED flash                  |
 | Release Date            | November 2016                     |
 
-![OPPO A57](https://support.oppo.com/content/dam/oppo/common/support/products/A57.png "OPPO A57")
+![OPPO A57](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/OPPO_A57_LineageOS.jpg/522px-OPPO_A57_LineageOS.jpg "OPPO A57")
