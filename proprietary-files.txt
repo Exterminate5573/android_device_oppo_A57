@@ -1,6 +1,7 @@
 # All unpinned blobs below are extracted from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+# A57 Package version: CPH1701EX_11_A.36_181009
 
-# ACDB - from stock - CPH1701EX_11_A.36_181009
+# ACDB - from A57
 system/etc/acdbdata/16061/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|850d4fa7ba66145bb4efc713d3c2bf78d4ef5df2
 system/etc/acdbdata/16061/General_cal.acdb:vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|0d604afc047b080dcbb1043506e2d020853c3ad1
 system/etc/acdbdata/16061/Global_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|8e3421f309963ce1b218a5b391a04b62a2ce536c
@@ -103,7 +104,7 @@ vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 
-# Camera - from stock - CPH1701EX_11_A.36_181009
+# Camera - from A57
 system/bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|f96a99f9ab25a1a74296dd104b25382b53fd82f7|1c401954307686925e9b1bdd77fadad6ffac1d19
 vendor/lib/libflash_lm3642.so|07d0ed5295e75c84694756f7041650a6c5afa23b
 vendor/lib/libflash_pmic.so|c09d45b1cffc50023b274e34781b99b97acc0ba7
@@ -155,10 +156,10 @@ vendor/lib/libremosaic_daemon.so|ced066ab65b790e01433b0be64a0c0d9ef0f35bf
 -vendor/lib/libts_face_beautify_hal.so|4b8700003fd32f5a6a650821b86ed33e73992d10
 vendor/lib/libseemore.so|deec672a5ae3dc607621508c6f971001150b8cc7
 
-# Camera actuators - from stock - CPH1701EX_11_A.36_181009
+# Camera actuators - from A57
 vendor/lib/libactuator_dw9718s_16061.so|eb24617b484543b33ac59e042fe133f128e0a097
 
-# Camera chromatix - from stock - CPH1701EX_11_A.36_181009
+# Camera chromatix - from A57
 vendor/lib/libchromatix_imx258_4k_preview_bu64244gwz.so|941507c0a61baf43ef7636004429bced749217a7
 vendor/lib/libchromatix_imx258_4k_preview_truly.so|3850f404c7a95fdf7efe302e4857d0a3e1e87217
 vendor/lib/libchromatix_imx258_4k_video_bu64244gwz.so|85c1fb6cd553fa2d9132c5a2ff2035b5cf123108
@@ -258,7 +259,7 @@ vendor/lib/libchromatix_s5k3p3sp_snapshot_fb.so|76b0332de511b823ae71a588f839e3f3
 vendor/lib/libchromatix_s5k3p3sp_zsl_preview_cmcc.so|a00bb96900748ae60d7a98781694ae66074d85d5
 vendor/lib/libchromatix_s5k3p3sp_zsl_preview_cmcc_ofilm.so|aff0e069be1b8c52979dc9ee0e6b119345e83c43
 
-# Camera configs - from stock - CPH1701EX_11_A.36_181009
+# Camera configs - from A57
 system/etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml|c57c495ea72c00a5f6212a195ed9212e98910800
 system/etc/camera/imx258_bear_chromatix.xml:vendor/etc/camera/imx258_bear_chromatix.xml|211a55da57e93c555e12f4199ed480c068a166e4
 system/etc/camera/imx258_chromatix.xml:vendor/etc/camera/imx258_chromatix.xml|a8bccbf34fa999c45562f4d9d31c60575bb8b65b
@@ -268,12 +269,12 @@ system/etc/camera/imx258_truly_chromatix.xml:vendor/etc/camera/imx258_truly_chro
 system/etc/camera/s5k3p3sp_chromatix.xml:vendor/etc/camera/s5k3p3sp_chromatix.xml|684a4ec4cacf668436474424145cbf0fa9abe18d|c8104e9bcf3f1533a762aacb3d4814429a1a3e28
 system/etc/camera/s5k3p3sp_ofilm_chromatix.xml:vendor/etc/camera/s5k3p3sp_ofilm_chromatix.xml|f7f289faee84baa0d806ebba7facd92be202f214|fdbeab8c1d90c1532613584e5c9c6011f60d770b
 
-# Camera eeproms - from stock - CPH1701EX_11_A.36_181009
+# Camera eeproms - from A57
 vendor/lib/libmmcamera_eeprom_util.so|2d8af8eb6b054a8a71062b5e3d87cebcc1c0ef82
 vendor/lib/libmmcamera_imx258_gt24c64_eeprom.so|c1ab89fb53699ebf354ee17135d3cd8ba12a7402
 vendor/lib/libmmcamera_m24c64s_eeprom.so|49e0e8da182fe297845889c9a8705236b75f7760
 
-# Camera isp - from stock - CPH1701EX_11_A.36_181009
+# Camera isp - from A57
 vendor/lib/libmmcamera_isp_sub_module.so|99c3f06472858cb1ecac0c166df292c8e5abe768
 vendor/lib/libmmcamera_isp_clamp_video40.so|c93feb12e16f6cf79c4fd171cb3398a4878e1531
 vendor/lib/libmmcamera_isp_bcc40.so|9a296caed109536d27b538b0cfac1ac61c3d4467
@@ -458,12 +459,12 @@ vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
-# Fingerprint - FPC - from stock - CPH1701EX_11_A.36_181009
+# Fingerprint - FPC - from A57
 system/lib64/hw/fingerprint.msm8937.so:vendor/lib64/hw/fingerprint.msm8937.so|e5bda11ba1634777a33b896c37145723f4bedfd2
 system/lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so|1e2ebfa28a378c0bd0d4d0f3836125623c84a31e|cf54ba9948fc2e3e82b723224733242a5aaa1176
 system/lib64/libalipay_factory.so:vendor/lib64/libalipay_factory.so|8637b01c206cc2b476e333f6e5549c032c8d238b|1e481a2ddd54fd8fde4fce2107696df189dc7b41
 
-# Fingerprint - Alipay firmware - from stock - CPH1701EX_11_A.36_181009
+# Fingerprint - Alipay firmware - from A57
 system/etc/firmware/alipay.b00:vendor/firmware/alipay.b00|9dd173e4faceb2b276d4847dbb5b2a1f397de2e4
 system/etc/firmware/alipay.b01:vendor/firmware/alipay.b01|69f22449bfad7a40faed408eb348697f9dde6605
 system/etc/firmware/alipay.b02:vendor/firmware/alipay.b02|e2886279537ea48c80e3182eeef434c1eae2fede
@@ -473,7 +474,7 @@ system/etc/firmware/alipay.b05:vendor/firmware/alipay.b05|648187fbf1a063bb4a637d
 system/etc/firmware/alipay.b06:vendor/firmware/alipay.b06|aaa8b57e75a45ec6193d18a601f7115613072b79
 system/etc/firmware/alipay.mdt:vendor/firmware/alipay.mdt|01232028fe96f9562f930cd27c8482eb462b4fd8
 
-# Fingerprint - FPC firmware - from stock - CPH1701EX_11_A.36_181009
+# Fingerprint - FPC firmware - from A57
 system/etc/firmware/fingerprint.b00:vendor/firmware/fingerprint.b00|22912d59d481d844b58079ed32a7e90af8a1bcaa
 system/etc/firmware/fingerprint.b01:vendor/firmware/fingerprint.b01|83d10cf370f12e99ed21a095bdf78640370625bb
 system/etc/firmware/fingerprint.b02:vendor/firmware/fingerprint.b02|b7f8565c88f65d0a974c52ba5edf921ece9625c5
@@ -949,7 +950,7 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.ssc.so
 
-# Sensors config - from stock - CPH1701EX_11_A.36_181009
+# Sensors config - from A57
 system/etc/sensors/sensor_def_16061.conf:vendor/etc/sensors/sensor_def_qcomdev.conf|ff046f6a8a6b2a2e1b47c10e6985ce78ee8e9f92
 
 # Thermal
