@@ -85,6 +85,9 @@ function blob_fixup() {
         system_ext/lib64/lib-imsvideocodec.so)
             "${PATCHELF}" --add-needed "libshim_imsvideocodec.so" "${2}"
             ;;
+        vendor/bin/mm-qcamera-daemon)
+            sed -i "s|/data/misc/camera/cam_socket|/data/vendor/qcam/cam_socket|g" "${2}"
+            ;;
         vendor/lib64/libalipay_factory.so|vendor/lib64/lib_fpc_tac_shared.so)
             sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
             ;;
