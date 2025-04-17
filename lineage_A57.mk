@@ -25,9 +25,3 @@ PRODUCT_BRAND := OPPO
 PRODUCT_MODEL := OPPO A57
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
-
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := OPPO/A57/A57:6.0.1/MMB29M/1527754036:user/release-keys
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="msm8937_64-user 6.0.1 MMB29M eng.root.20191205.095236 dev-keys"
