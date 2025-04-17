@@ -3,3 +3,16 @@ userdebug_or_eng(`
   allow rmt_storage debugfs_rmt:dir search;
   allow rmt_storage debugfs_rmt:file rw_file_perms;
 ')
+
+# Allow rmt_storage to backup/restore NV contents
+allow rmt_storage nvbackup_block_device:blk_file rw_file_perms;
+
+# Permit reading OPPO specific version information
+allow rmt_storage proc_oppo_info:file r_file_perms;
+
+# FIXME: net_raw should not be granted to any service!
+# Grant rmt_storage permission to use net_raw for now, since the older blobs
+# do not setup CAP_NET_BIND_SERVICE on its own.
+# Recommended action is to further hex-edit the blob to add support for the
+# set-up, like how setgroups() dac_override issue had been fixed.
+allow rmt_storage self:capability net_raw;
