@@ -430,7 +430,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    usb_compositions.conf \
+    A57_usb_compositions.conf \
     android.hardware.usb@1.3-service.basic \
     android.hardware.usb.gadget@1.2-service-qti
 
