@@ -149,10 +149,6 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Security patch level
 VENDOR_SECURITY_PATCH := 2018-08-05
 
-# Shims
-TARGET_LD_SHIM_LIBS := \
-    /vendor/lib64/hw/fingerprint.msm8937.so|libshims_binder.so
-
 # SEPolicy
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor

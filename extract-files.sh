@@ -95,6 +95,9 @@ function blob_fixup() {
             # Update setgroups to fix wake locks
             sed -i "s|\x88\x77\xc1\xd2\x08\x7d\x80\xf2|\x08\x7d\x80\xd2\x48\x78\xc1\xf2|g" "${2}"
             ;;
+        vendor/lib64/hw/fingerprint.msm8937.so)
+            "${PATCHELF}" --add-needed "libshims_binder.so" "${2}"
+            ;;
         vendor/lib64/libalipay_factory.so|vendor/lib64/lib_fpc_tac_shared.so)
             sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
             ;;
