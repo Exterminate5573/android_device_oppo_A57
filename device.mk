@@ -343,7 +343,7 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libcamshim \
-    libshims_binder
+    libbinder_shim
 
 # Recovery
 PRODUCT_PACKAGES += \

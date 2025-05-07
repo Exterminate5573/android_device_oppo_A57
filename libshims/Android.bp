@@ -29,22 +29,3 @@ cc_library_shared {
         "libutils",
     ],
 }
-
-cc_library_shared {
-    name: "libshims_binder",
-    proprietary: true,
-    defaults: ["hidl_defaults"],
-        srcs: [
-            "libshims_binder.c",
-        ],
-        cflags: [
-            "-Werror",
-            "-Wextra",
-            "-Wall",
-            "-D__ANDROID_VNDK__",
-        ],
-        shared_libs: [
-            "libbinder",
-            "libutils",
-        ],
-}
