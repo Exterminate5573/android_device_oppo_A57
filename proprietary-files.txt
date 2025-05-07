@@ -497,7 +497,7 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
 # Fingerprint - FPC - from A57
-system/lib64/hw/fingerprint.msm8937.so:vendor/lib64/hw/fingerprint.msm8937.so|e5bda11ba1634777a33b896c37145723f4bedfd2
+system/lib64/hw/fingerprint.msm8937.so:vendor/lib64/hw/fingerprint.msm8937.so|e5bda11ba1634777a33b896c37145723f4bedfd2|41a61bcb6853f997d16f5ddbe47af9216dcd6dce
 system/lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so|1e2ebfa28a378c0bd0d4d0f3836125623c84a31e|cf54ba9948fc2e3e82b723224733242a5aaa1176
 system/lib64/libalipay_factory.so:vendor/lib64/libalipay_factory.so|8637b01c206cc2b476e333f6e5549c032c8d238b|1e481a2ddd54fd8fde4fce2107696df189dc7b41
 
