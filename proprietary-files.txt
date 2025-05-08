@@ -77,27 +77,29 @@ vendor/lib64/soundfx/libasphere.so
 # ANT+ (vendor)
 vendor/lib64/com.qualcomm.qti.ant@1.0.so
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/libbt-hidlclient.so
-vendor/lib64/libbtnv.so
+# Bluetooth - from PAN
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|2401640a10df4de23f704b87c4adab2da9ed111d
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|9bc15c011f125cd34b5e5ab6b472d16c4285b067
+vendor/lib64/libbt-hidlclient.so|1491414e874419d2df1529c511bd48e348cf53a8
+vendor/lib64/libbtnv.so|07e031527e60ce5e62a5017fd1d7ff83ef1aafcf
 
-# Bluetooth (shared dependencies)
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
+# Bluetooth (shared dependencies) - from PAN
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|17e86e9a2054db733d955fcf1066f6e06a44fb21
 
-# Bluetooth Audio
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib64/libbluetooth_audio_session_qti.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
+# Bluetooth Audio - from PAN
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|fcf1227dde7bef28c718f1a23b31854e201e4cd5
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|e3ee09937aa7b070abf05c9b9d272a8cef4d5bd5
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|2e76888d155913264d9c4adc026d14e6ab0a681b
+vendor/lib/libbluetooth_audio_session_qti.so|ac74d5557872bcc7216dd826bb0de7aa91291b34
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|82b2b1bd3a84d034e127480257e13f937e656c03
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|69c513dd423649683f2d3132682cea6f66d3223d
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|b432721db233cec4f252518adcb437ffe28e0054
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|a97a6c330c932176acee0bce820c6e737778aed4
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|5a907028e9f5c570e06dfae94d339e6aae523e29
+vendor/lib64/libbluetooth_audio_session_qti.so|8ff9c90304ffd3e6e47972c5564a977035faa9f3
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|d1443e04e24cb45dd06f5d222b22a699c9e82cb1
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|1671815a79dab0fde9248d0851085ec1ab314f64
 
 # Camera - from A57
 system/bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|f96a99f9ab25a1a74296dd104b25382b53fd82f7|04f636dbd937042c8f20384fc1face6e32e9eaaf
@@ -519,11 +521,11 @@ system/etc/firmware/fingerprint.b05:vendor/firmware/fingerprint.b05|74a2339683cb
 system/etc/firmware/fingerprint.b06:vendor/firmware/fingerprint.b06|341f188722aab317d78fdbdfdd0fbe52b2c0f25f
 system/etc/firmware/fingerprint.mdt:vendor/firmware/fingerprint.mdt|03a3bb29a26f97dda8abdb3b7a1533e0cc1b10f5
 
-# FM
-system/lib64/fm_helium.so
-system/lib64/libfm-hci.so
-product/lib64/vendor.qti.hardware.fm@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+# FM - from PAN
+system_ext/lib64/fm_helium.so|55ef376cc802574df92025bebaba1cebcc74a918
+system_ext/lib64/libfm-hci.so|0cfbf3d84724428721973cc7ad22f5d1e1368591
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so|4a2522113d6b737a87d3b43233f1afa94d9e45ad
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|2bf5898dd78591104f7e9b154a21f19568f2d76e
 
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.0-service-qti
