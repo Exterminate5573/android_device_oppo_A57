@@ -18,6 +18,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    hardware/oplus \
     vendor/qcom/opensource/usb/etc \
     $(LOCAL_PATH)
 
@@ -154,7 +155,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    OPPODoze
+    OplusDoze
 
 # DPM
 PRODUCT_PACKAGES += \
