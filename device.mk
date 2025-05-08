@@ -119,7 +119,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8937 \
-    vendor.qti.hardware.camera.device@1.0
+    vendor.qti.hardware.camera.device@1.0 \
+    libcamshim
 
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
@@ -174,7 +175,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.0-service.A57
+    android.hardware.biometrics.fingerprint@2.0-service.A57 \
+    libbinder_shim
 
 # FM
 PRODUCT_PACKAGES += \
@@ -339,11 +341,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
-
-# Shims
-PRODUCT_PACKAGES += \
-    libcamshim \
-    libbinder_shim
 
 # Recovery
 PRODUCT_PACKAGES += \
