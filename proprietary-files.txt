@@ -1,7 +1,7 @@
 # All unpinned blobs below are extracted from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 # A57 Package version: CPH1701EX_11_A.36_181009
 # PAN Package version: Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
-# FP3 Package version: Fairphone/FP3/FP3:11/8901.4.A.0010/gms-f74c58a8:user/release-keys
+# FP3 Package version: Fairphone/FP3/FP3:13/6.A.031.5/gms-fa7632b5:user/release-keys
 
 # ACDB - from A57
 system/etc/acdbdata/16061/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|850d4fa7ba66145bb4efc713d3c2bf78d4ef5df2
@@ -77,29 +77,23 @@ vendor/lib64/soundfx/libasphere.so
 # ANT+ (vendor)
 vendor/lib64/com.qualcomm.qti.ant@1.0.so
 
-# Bluetooth - from PAN
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|2401640a10df4de23f704b87c4adab2da9ed111d
+# Bluetooth - from FP3
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|73d7132773572d87bdac6b5e454573e79d35316c
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|9bc15c011f125cd34b5e5ab6b472d16c4285b067
-vendor/lib64/libbt-hidlclient.so|1491414e874419d2df1529c511bd48e348cf53a8
-vendor/lib64/libbtnv.so|07e031527e60ce5e62a5017fd1d7ff83ef1aafcf
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|1e238b1e84d889f424001f5134f0d2994d13251a
+vendor/lib64/libbtnv.so|82cc941c6a262e0965925b4955b1ea508b798bfa
+vendor/lib64/libsoc_helper.so|affbc1cc49d3df3a6e174a21bf3fe79c7130d1c0
 
-# Bluetooth (shared dependencies) - from PAN
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|17e86e9a2054db733d955fcf1066f6e06a44fb21
+# Bluetooth (shared dependencies) - from FP3
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|a7c3fdcdfdf2d982b04baa89e0e4dc5f5d505bf7
 
-# Bluetooth Audio - from PAN
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|fcf1227dde7bef28c718f1a23b31854e201e4cd5
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|e3ee09937aa7b070abf05c9b9d272a8cef4d5bd5
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|2e76888d155913264d9c4adc026d14e6ab0a681b
-vendor/lib/libbluetooth_audio_session_qti.so|ac74d5557872bcc7216dd826bb0de7aa91291b34
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|82b2b1bd3a84d034e127480257e13f937e656c03
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|69c513dd423649683f2d3132682cea6f66d3223d
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|b432721db233cec4f252518adcb437ffe28e0054
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|a97a6c330c932176acee0bce820c6e737778aed4
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|5a907028e9f5c570e06dfae94d339e6aae523e29
-vendor/lib64/libbluetooth_audio_session_qti.so|8ff9c90304ffd3e6e47972c5564a977035faa9f3
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|d1443e04e24cb45dd06f5d222b22a699c9e82cb1
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|1671815a79dab0fde9248d0851085ec1ab314f64
+# Bluetooth Audio - from FP3
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|a608c234bdc93e46431dc51b321f28fd93b0eaf7
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|68848631511ed0117adc540725d0e2fa57843bd9
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|05e2d1fd44260cf603eb40a9f795d9ff4c43226f
+vendor/lib64/libbluetooth_audio_session_qti.so|7478f6d9bb38509bf1835665210b9d498ae6e482
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|25b2ce43c28c274b15c3b683831c214e3efb531d
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|117b74f1df4ee67297f431ae47d622bbb8f587ca
 
 # Camera - from A57
 system/bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|f96a99f9ab25a1a74296dd104b25382b53fd82f7|04f636dbd937042c8f20384fc1face6e32e9eaaf
@@ -153,7 +147,7 @@ vendor/lib/libremosaic_daemon.so|ced066ab65b790e01433b0be64a0c0d9ef0f35bf
 vendor/lib/libseemore.so|deec672a5ae3dc607621508c6f971001150b8cc7
 
 # Camera - from FP3
-vendor/lib/libmmcamera_dbg.so|cc5397c5a47e8460ed0f801bfc0bc543b9471f59
+vendor/lib/libmmcamera_dbg.so|06fdc7557001012abe631f83eb219d404225528e
 
 # Camera actuators - from A57
 vendor/lib/libactuator_dw9718s_16061.so|eb24617b484543b33ac59e042fe133f128e0a097
@@ -744,14 +738,14 @@ vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
-# Power-off alarm - from PAN
-product/app/PowerOffAlarm/PowerOffAlarm.apk:system_ext/app/PowerOffAlarm/PowerOffAlarm.apk
-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
-vendor/bin/power_off_alarm
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+# Power-off alarm - from FP3
+-product/app/PowerOffAlarm/PowerOffAlarm.apk:system_ext/app/PowerOffAlarm/PowerOffAlarm.apk|c7a8a195c47e1a3386173106ff6e2a68403b2e14
+-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|6508f5708221399eb8bd9754dc49bad32a911e27
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|e8f29b90facd4d605dca41644f5a0dc77f6d2e9b
+vendor/bin/power_off_alarm|b41ffb912ae8db9c3abd7e3c94e9e77160cf7ff6
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|fdc8542c93c3e0572a172040bb6bb741baba348e
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|f34f3f363932160ef659ec21543b0d33f0215dbc
 
 # QMI
 system/etc/permissions/qti_libpermissions.xml
@@ -949,19 +943,19 @@ vendor/lib64/vendor.qti.imsrtpservice@2.0.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so
 
-# Sensors - from PAN
-vendor/bin/sensors.qti|b54dac6ef080b17858bbdfaa399163606e37d793
+# Sensors - from FP3
+vendor/bin/sensors.qti|cba682ce9a06fd2e1fbc3e3d63f9df524252b34d
 vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
-vendor/lib/hw/activity_recognition.msm8937.so|dcdf53625f48572dcbf37e83613bcbd1b4d98025
-vendor/lib/libsensor1.so|ad12458bcc6019211a7d2b50acdd98e57dd75681
-vendor/lib64/hw/activity_recognition.msm8937.so|2a281cfb177439933f4d0467749259f937a1fa91
-vendor/lib64/libsensor1.so|f648b722cb742bc245e774581b95833a79ffaa1a
+vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|99ba43ace06eae105068bc2131cb1dc448160577
+vendor/lib/libsensor1.so|59289e1283feea150799fd4f60b0dd146f912990
+vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|6dedb46de4d3bbafc02430bac942b1ec78f915df
+vendor/lib64/libsensor1.so|f78638f1a87b99284e7aa2daa47e44adced55b70
 
 # Sensors - SSC - from FP3
-vendor/lib/libsensor_reg.so|466b65a5986a471b47a281dd7d1867b0510ee3c0
-vendor/lib/sensors.ssc.so|661ca9baed115c6e7934f2d37a0319aecd1b949a
-vendor/lib64/libsensor_reg.so|07d7574981477c733d3c509751aac7c2abe93762
-vendor/lib64/sensors.ssc.so|fc96a65a026fc220d96b3a9173f09d6e74df4e6a
+vendor/lib/libsensor_reg.so|37916892236519fd374c7fca3b04c3f4940e697e
+vendor/lib/sensors.ssc.so|30d8799c92db27699c90e12243447d7d999fbc85
+vendor/lib64/libsensor_reg.so|c5ba27049d5f36b0877358c154de67080b66e7de
+vendor/lib64/sensors.ssc.so|aeab604388f7e41e2da7dad76bf22bcf47a632db
 
 # Sensors config - from A57
 system/etc/sensors/sensor_def_16061.conf:vendor/etc/sensors/sensor_def_qcomdev.conf|ff046f6a8a6b2a2e1b47c10e6985ce78ee8e9f92
