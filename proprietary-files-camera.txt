@@ -69,7 +69,7 @@ vendor/lib/libtrueportrait.so
 vendor/lib/libubifocus.so
 
 # Camera - from FP3
-vendor/lib/libmmcamera_dbg.so|06fdc7557001012abe631f83eb219d404225528e
+vendor/lib/libmmcamera_dbg.so|06fdc7557001012abe631f83eb219d404225528e|35c45dbf990b342d85bf3488a2615d887e1ae571
 
 # Camera actuators
 vendor/lib/libactuator_dw9718s_16061.so
