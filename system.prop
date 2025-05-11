@@ -1,7 +1,3 @@
-# Camera
-persist.camera.gyro.disable=0
-persist.camera.isp.clock.optmz=0
-
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
