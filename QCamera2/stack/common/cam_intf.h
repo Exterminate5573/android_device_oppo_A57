@@ -557,6 +557,11 @@ typedef struct{
     cam_format_t supported_meta_raw_fmts[CAM_FORMAT_MAX];
     cam_dimension_t raw_meta_dim[MAX_SIZES_CNT];
     cam_sub_format_type_t sub_fmt[CAM_FORMAT_SUBTYPE_MAX];
+
+    /* OPPO additions */
+    char sensor_name[32];
+    uint32_t max_long_exposure_time;
+    uint32_t dng_raw_size;
 } cam_capability_t;
 
 typedef enum {
@@ -865,6 +870,7 @@ typedef struct {
     INCLUDE(CAM_INTF_META_EXIF_DEBUG_AE,                cam_ae_exif_debug_t,         1);
     INCLUDE(CAM_INTF_META_EXIF_DEBUG_AWB,               cam_awb_exif_debug_t,        1);
     INCLUDE(CAM_INTF_META_EXIF_DEBUG_AF,                cam_af_exif_debug_t,         1);
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_01,             char,                        48);
     INCLUDE(CAM_INTF_META_EXIF_DEBUG_ASD,               cam_asd_exif_debug_t,        1);
     INCLUDE(CAM_INTF_META_EXIF_DEBUG_STATS,             cam_stats_buffer_exif_debug_t,   1);
     INCLUDE(CAM_INTF_META_EXIF_DEBUG_BESTATS,           cam_bestats_buffer_exif_debug_t, 1);
@@ -950,6 +956,25 @@ typedef struct {
     INCLUDE(CAM_INTF_PARM_BURST_LED_ON_PERIOD,          uint32_t,                    1);
     INCLUDE(CAM_INTF_PARM_LONGSHOT_ENABLE,              int8_t,                      1);
     INCLUDE(CAM_INTF_PARM_TONE_MAP_MODE,                uint32_t,                    1);
+
+    /* Unknown OPPO additions */
+    /* int32_t is a guess, could also be uint32_t / enum */
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_03,             char,                        1);
+    volatile char oppo_reserved1[2];
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_04,             int32_t,                     1);
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_02,             char,                        1);
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_07,             char,                        1);
+    volatile char oppo_reserved2[2];
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_08,             int32_t,                     1);
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_05,             char,                        1);
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_06,             char,                        1);
+    volatile char oppo_reserved3[2];
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_09,             int32_t,                     1);
+    INCLUDE(CAM_INTF_META_AEC_OPPO_UNKNOWN,             int32_t,                     2);
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_10,             int32_t,                     1);
+
+    /* HAL1 specific */
+    /* read only */
     INCLUDE(CAM_INTF_META_TOUCH_AE_RESULT,              int32_t,                     1);
     INCLUDE(CAM_INTF_PARM_LED_CALIBRATION,              cam_led_calibration_mode_t,  1);
     INCLUDE(CAM_INTF_PARM_ADV_CAPTURE_MODE,             uint8_t,                     1);
@@ -1010,6 +1035,12 @@ typedef struct {
     INCLUDE(CAM_INTF_META_REPROCESS_FLAGS,              uint8_t,                     1);
     INCLUDE(CAM_INTF_PARM_JPEG_ENCODE_CROP,             cam_stream_crop_info_t,      1);
     INCLUDE(CAM_INTF_PARM_JPEG_SCALE_DIMENSION,         cam_dimension_t,             1);
+
+    /* Unknown OPPO additions */
+    INCLUDE(CAM_INTF_META_OPPO_RESERVED_11,             char,                        28);
+    volatile char oppo_reserved4[4];
+
+    /* HAL3 specific */
     INCLUDE(CAM_INTF_META_FOCUS_DEPTH_INFO,             uint8_t,                     1);
 } metadata_data_t;
 

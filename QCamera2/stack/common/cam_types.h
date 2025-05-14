@@ -1468,6 +1468,7 @@ typedef struct {
   cam_auto_scene_t      detected_scene;
   uint8_t               max_n_scenes;
   cam_asd_scene_info_t  scene_info[S_MAX];
+  volatile char oppo_reserved[60];
 } cam_asd_decision_t;
 
 
@@ -1490,6 +1491,7 @@ typedef struct {
     int32_t          sensing_method;
     float            crop_factor;
     cam_sensor_t sens_type;
+    volatile char oppo_reserved[40];
 } cam_sensor_params_t;
 
 typedef enum {
@@ -1518,6 +1520,7 @@ typedef struct {
     int32_t est_snap_iso_value;
     uint32_t est_snap_luma;
     uint32_t est_snap_target;
+    volatile char oppo_reserved[20];
 } cam_3a_params_t;
 
 typedef struct {
@@ -1538,6 +1541,7 @@ typedef struct {
     int32_t cct_value;
     cam_awb_gain_t rgb_gains;
     cam_awb_ccm_update_t ccm_update;
+    volatile char oppo_reserved[28];
 } cam_awb_params_t;
 
 typedef struct {
@@ -1912,6 +1916,7 @@ typedef enum {
     CAM_INTF_META_EXIF_DEBUG_AE,
     CAM_INTF_META_EXIF_DEBUG_AWB,
     CAM_INTF_META_EXIF_DEBUG_AF,
+    CAM_INTF_META_OPPO_RESERVED_01,
     CAM_INTF_META_EXIF_DEBUG_ASD,
     CAM_INTF_META_EXIF_DEBUG_STATS,
     CAM_INTF_META_EXIF_DEBUG_BESTATS,
@@ -2213,6 +2218,25 @@ typedef enum {
     /* Number of streams and size of streams in
        current configuration for pic res*/
     CAM_INTF_META_STREAM_INFO_FOR_PIC_RES,
+
+    /* Params added by OPPO, it is not known what they do */
+    CAM_INTF_META_OPPO_RESERVED_02, /* 229 */
+    CAM_INTF_META_OPPO_RESERVED_03,
+    CAM_INTF_META_OPPO_RESERVED_04,
+    CAM_INTF_META_OPPO_RESERVED_05,
+    CAM_INTF_META_OPPO_RESERVED_06,
+    CAM_INTF_META_OPPO_RESERVED_07,
+    CAM_INTF_META_OPPO_RESERVED_08,
+    /* Param found in mct, 4 bytes in size */
+    CAM_INTF_META_OPPO_RESERVED_09,
+    /* Param found in mct under MCT_BUS_MSG_AEC_IMMEDIATE case, 8 bytes in size */
+    CAM_INTF_META_AEC_OPPO_UNKNOWN,
+    CAM_INTF_META_OPPO_RESERVED_10,
+    /* Param found in mct, 28 bytes in size */
+    CAM_INTF_META_OPPO_RESERVED_11, /* 239 */
+    /* Param is unused in HAL */
+    CAM_INTF_META_OPPO_RESERVED_12,
+
     CAM_INTF_META_FOCUS_DEPTH_INFO,
     /*Focus value output from af core*/
     CAM_INTF_META_FOCUS_VALUE,
