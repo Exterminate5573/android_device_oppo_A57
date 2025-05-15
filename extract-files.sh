@@ -94,8 +94,12 @@ function blob_fixup() {
             sed -i "s|libandroid.so|libcamshim.so|g" "${2}"
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
             ;;
-        vendor/lib/libchromaflash.so|vendor/lib/libcvface_api.so|vendor/lib/liboptizoom.so|vendor/lib/libmmcamera_hdr_gb_lib.so|vendor/lib/libts_detected_face_hal.so|vendor/lib/libts_face_beautify_hal.so|vendor/lib/libseemore.so|vendor/lib/libtrueportrait.so|vendor/lib/libubifocus.so)
+        vendor/lib/libchromaflash.so|vendor/lib/liboptizoom.so|vendor/lib/libmmcamera_hdr_gb_lib.so|vendor/lib/libts_detected_face_hal.so|vendor/lib/libts_face_beautify_hal.so|vendor/lib/libseemore.so|vendor/lib/libtrueportrait.so|vendor/lib/libubifocus.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libcvface_api.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            "${PATCHELF}" --remove-needed "libjnigraphics.so" "${2}"
             ;;
     esac
 }
