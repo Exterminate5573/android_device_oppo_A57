@@ -80,7 +80,7 @@ function blob_fixup() {
                 sed -i "s|android.hardware.radio.config@${v}.so|android.hardware.radio.c_shim@${v}.so|g" "${2}"
             done
             ;;
-        vendor/bin/mm-qcamera-daemon|vendor/lib/libmmcamera2_cpp_module.so|vendor/lib/libmmcamera2_dcrf.so|vendor/lib/libmmcamera2_iface_modules.so|vendor/lib/libmmcamera2_imglib_modules.so|vendor/lib/libmmcamera2_mct.so|vendor/lib/libmmcamera2_pproc_modules.so|vendor/lib/libmmcamera2_q3a_core.so|vendor/lib/libmmcamera2_stats_algorithm.so|vendor/lib/libmmcamera_imglib.so|vendor/lib/libmmcamera_pdaf.so|vendor/lib/libmmcamera_pdafcamif.so|vendor/lib/libmmcamera_tintless_algo.so|vendor/lib/libmmcamera_tintless_bg_pca_algo.so|vendor/lib/libmmcamera_tuning.so|vendor/lib/libremosaic_daemon.so)
+        vendor/bin/mm-qcamera-daemon|vendor/lib/libmmcamera2_cpp_module.so|vendor/lib/libmmcamera2_dcrf.so|vendor/lib/libmmcamera2_iface_modules.so|vendor/lib/libmmcamera2_imglib_modules.so|vendor/lib/libmmcamera2_mct.so|vendor/lib/libmmcamera2_pproc_modules.so|vendor/lib/libmmcamera2_q3a_core.so|vendor/lib/libmmcamera2_stats_algorithm.so|vendor/lib/libmmcamera_imglib.so|vendor/lib/libmmcamera_pdaf.so|vendor/lib/libmmcamera_pdafcamif.so|vendor/lib/libmmcamera_tintless_algo.so|vendor/lib/libmmcamera_tintless_bg_pca_algo.so|vendor/lib/libmmcamera_tuning.so|vendor/lib/libremosaic_daemon.so|vendor/lib64/libremosaic_daemon.so)
             sed -i "s|/data/misc/camera/|/data/vendor/qcam/|g" "${2}"
             ;;
         vendor/lib/libmmcamera_dbg.so)
@@ -96,6 +96,9 @@ function blob_fixup() {
             ;;
         vendor/lib/libchromaflash.so|vendor/lib/liboptizoom.so|vendor/lib/libmmcamera_hdr_gb_lib.so|vendor/lib/libts_detected_face_hal.so|vendor/lib/libts_face_beautify_hal.so|vendor/lib/libseemore.so|vendor/lib/libtrueportrait.so|vendor/lib/libubifocus.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib64/libremosaiclib.so|vendor/lib64/libremosaic_tuning.so)
+            "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
         vendor/lib/libcvface_api.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"

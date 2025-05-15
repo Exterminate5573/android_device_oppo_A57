@@ -1,2 +1,5 @@
+# Camera
+android.samsung.IRemosaicDaemon									u:object_r:remosaic_daemon_service:s0
+
 # Fingerprint
 android.hardware.fingerprint.IGoodixFingerprintDaemon			u:object_r:fingerprint_vndservice:s0

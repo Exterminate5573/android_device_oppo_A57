@@ -13,3 +13,7 @@ allow mm-qcamerad proc_oppo_camera:file r_file_perms;
 allow mm-qcamerad proc_flashlight:file rw_file_perms;
 
 get_prop(mm-qcamerad, camera_prop);
+
+vndbinder_use(mm-qcamerad);
+allow mm-qcamerad remosaic_daemon_service:service_manager find;
+allow mm-qcamerad remosaic_daemon:binder call;

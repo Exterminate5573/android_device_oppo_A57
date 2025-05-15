@@ -59,9 +59,6 @@ vendor/lib/libmmqjpegdma.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
-vendor/lib/libremosaiclib.so
-vendor/lib/libremosaic_daemon.so
-vendor/lib/libremosaic_tuning.so
 -vendor/lib/libts_detected_face_hal.so
 -vendor/lib/libts_face_beautify_hal.so
 vendor/lib/libseemore.so
@@ -389,3 +386,12 @@ vendor/firmware/cpp_firmware_v1_5_1.fw|f3f622ab29a560b170d0f2c6ddec14b933f2d476
 vendor/firmware/cpp_firmware_v1_5_2.fw|58dd7f7c09dbb62bc6f334a8885064b292610675
 vendor/firmware/cpp_firmware_v1_6_0.fw|dcd3d1f904c7ee3d731f8f28b5f78f2503916ada
 vendor/firmware/cpp_firmware_v1_8_0.fw|26e2badbb4e3049243f0a176722f26879e7b87e8
+
+# Camera remosaic
+system/bin/remosaic_daemon:vendor/bin/remosaic_daemon
+vendor/lib/libremosaiclib.so
+vendor/lib/libremosaic_daemon.so
+vendor/lib/libremosaic_tuning.so
+vendor/lib64/libremosaiclib.so
+vendor/lib64/libremosaic_daemon.so
+vendor/lib64/libremosaic_tuning.so
