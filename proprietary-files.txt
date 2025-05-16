@@ -74,7 +74,12 @@ system/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib64/soundfx/libasphere.so
 
-# ANT+ (vendor) - from FP3
+# ANT+ - from FP3
+system_ext/lib/com.qualcomm.qti.ant@1.0.so|2c9b0ef686c0222903ebec996295dcc8787bf873
+system_ext/lib/libantradio.so|788b8cea6f7081f537f459fbe30ce36df1b6c9ae
+system_ext/lib64/com.qualcomm.qti.ant@1.0.so|2bad2579ce576c46af6a50ee6687bd92fa7f76cd
+system_ext/lib64/libantradio.so|57b59e09a614a41f720a285e089627b830a6be40
+vendor/lib/hw/com.dsi.ant@1.0-impl.so|5afa58aa4e28a093b60fbe4fe88d40bcd5019da8
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|6e2b594b44552b42000164c091af5cf7a4c508f5
 
 # Bluetooth - from FP3
