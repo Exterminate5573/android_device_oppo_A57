@@ -36,19 +36,7 @@
 #include <sys/types.h>
 #include <libril/ril_ex.h>
 
-#if defined(PRODUCT_COMPATIBLE_PROPERTY)
-#define LIB_PATH_PROPERTY   "vendor.rild.libpath"
-#define LIB_ARGS_PROPERTY   "vendor.rild.libargs"
-#else
-#define LIB_PATH_PROPERTY   "rild.libpath"
-#define LIB_ARGS_PROPERTY   "rild.libargs"
-#endif
-#define MAX_LIB_ARGS        16
-
-static void usage(const char *argv0) {
-    fprintf(stderr, "Usage: %s -l <ril impl library> [-- <args for impl library>]\n", argv0);
-    exit(EXIT_FAILURE);
-}
+#define RIL_LIB_NAME "libril-qc-qmi-1.so"
 
 extern char ril_service_name_base[MAX_SERVICE_NAME_LENGTH];
 extern char ril_service_name[MAX_SERVICE_NAME_LENGTH];
@@ -85,25 +73,7 @@ static struct RIL_Env s_rilEnv = {
 
 extern void RIL_startEventLoop();
 
-static int make_argv(char * args, char ** argv) {
-    // Note: reserve argv[0]
-    int count = 1;
-    char * tok;
-    char * s = args;
-
-    while ((tok = strtok(s, " \0"))) {
-        argv[count] = tok;
-        s = NULL;
-        count++;
-    }
-    return count;
-}
-
 int main(int argc, char **argv) {
-    // vendor ril lib path either passed in as -l parameter, or read from rild.libpath property
-    const char *rilLibPath = NULL;
-    // ril arguments either passed in as -- parameter, or read from rild.libargs property
-    char **rilArgv;
     // handle for vendor ril lib
     void *dlHandle;
     // Pointer to ril init function in vendor ril
@@ -114,57 +84,14 @@ int main(int argc, char **argv) {
 
     // functions returned by ril init function in vendor ril
     const RIL_RadioFunctions *funcs;
-    // lib path from rild.libpath property (if it's read)
-    char libPath[PROPERTY_VALUE_MAX];
-    // flat to indicate if -- parameters are present
-    unsigned char hasLibArgs = 0;
 
     int i;
-    // ril/socket id received as -c parameter, otherwise set to 0
-    const char *clientId = NULL;
 
     RLOGD("**RIL Daemon Started**");
-    RLOGD("**RILd param count=%d**", argc);
 
     umask(S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IWOTH | S_IXOTH);
-    for (i = 1; i < argc ;) {
-        if (0 == strcmp(argv[i], "-l") && (argc - i > 1)) {
-            rilLibPath = argv[i + 1];
-            i += 2;
-        } else if (0 == strcmp(argv[i], "--")) {
-            i++;
-            hasLibArgs = 1;
-            break;
-        } else if (0 == strcmp(argv[i], "-c") &&  (argc - i > 1)) {
-            clientId = argv[i+1];
-            i += 2;
-        } else {
-            usage(argv[0]);
-        }
-    }
 
-    if (clientId == NULL) {
-        clientId = "0";
-    } else if (atoi(clientId) >= MAX_RILDS) {
-        RLOGE("Max Number of rild's supported is: %d", MAX_RILDS);
-        exit(0);
-    }
-    if (strncmp(clientId, "0", MAX_CLIENT_ID_LENGTH)) {
-        snprintf(ril_service_name, sizeof(ril_service_name), "%s%s", ril_service_name_base,
-                 clientId);
-    }
-
-    if (rilLibPath == NULL) {
-        if ( 0 == property_get(LIB_PATH_PROPERTY, libPath, NULL)) {
-            // No lib sepcified on the command line, and nothing set in props.
-            // Assume "no-ril" case.
-            goto done;
-        } else {
-            rilLibPath = libPath;
-        }
-    }
-
-    dlHandle = dlopen(rilLibPath, RTLD_NOW);
+    dlHandle = dlopen(RIL_LIB_NAME, RTLD_NOW);
 
     if (dlHandle == NULL) {
         RLOGE("dlopen failed: %s", dlerror());
@@ -178,7 +105,7 @@ int main(int argc, char **argv) {
         dlsym(dlHandle, "RIL_Init");
 
     if (rilInit == NULL) {
-        RLOGE("RIL_Init not defined or exported in %s\n", rilLibPath);
+        RLOGE("RIL_Init not defined or exported in %s\n", RIL_LIB_NAME);
         exit(EXIT_FAILURE);
     }
 
@@ -188,30 +115,12 @@ int main(int argc, char **argv) {
         dlsym(dlHandle, "RIL_SAP_Init");
     err_str = dlerror();
     if (err_str) {
-        RLOGW("RIL_SAP_Init not defined or exported in %s: %s\n", rilLibPath, err_str);
+        RLOGW("RIL_SAP_Init not defined or exported in %s: %s\n", RIL_LIB_NAME, err_str);
     } else if (!rilUimInit) {
-        RLOGW("RIL_SAP_Init defined as null in %s. SAP Not usable\n", rilLibPath);
+        RLOGW("RIL_SAP_Init defined as null in %s. SAP Not usable\n", RIL_LIB_NAME);
     }
 
-    if (hasLibArgs) {
-        rilArgv = argv + i - 1;
-        argc = argc -i + 1;
-    } else {
-        static char * newArgv[MAX_LIB_ARGS];
-        static char args[PROPERTY_VALUE_MAX];
-        rilArgv = newArgv;
-        property_get(LIB_ARGS_PROPERTY, args, "");
-        argc = make_argv(args, rilArgv);
-    }
-
-    rilArgv[argc++] = "-c";
-    rilArgv[argc++] = (char*)clientId;
-    RLOGD("RIL_Init argc = %d clientId = %s", argc, rilArgv[argc-1]);
-
-    // Make sure there's a reasonable argv[0]
-    rilArgv[0] = argv[0];
-
-    funcs = rilInit(&s_rilEnv, argc, rilArgv);
+    funcs = rilInit(&s_rilEnv, argc, argv);
     RLOGD("RIL_Init rilInit completed");
 
     RIL_register(funcs);
@@ -220,16 +129,10 @@ int main(int argc, char **argv) {
 
     if (rilUimInit) {
         RLOGD("RIL_register_socket started");
-        RIL_register_socket(rilUimInit, RIL_SAP_SOCKET, argc, rilArgv);
+        RIL_register_socket(rilUimInit, RIL_SAP_SOCKET, argc, argv);
     }
 
     RLOGD("RIL_register_socket completed");
 
     rilc_thread_pool();
-
-done:
-    RLOGD("RIL_Init starting sleep loop");
-    while (true) {
-        sleep(UINT32_MAX);
-    }
 }

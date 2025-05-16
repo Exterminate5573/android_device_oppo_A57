@@ -75,6 +75,10 @@ function blob_fixup() {
         vendor/lib64/libalipay_factory.so|vendor/lib64/lib_fpc_tac_shared.so)
             sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
             ;;
+        vendor/lib64/libril-qc-qmi-1.so)
+            sed -i "s|libqmiservices.so|libQmiservices.so|g" "${2}"
+            "${PATCHELF_0_17_2}" --replace-needed "libmedia.so" "libshims_legacy_ril.so" "${2}"
+            ;;
         vendor/lib64/libril-qc-hal-qmi.so)
             for v in 1.{0..2}; do
                 sed -i "s|android.hardware.radio.config@${v}.so|android.hardware.radio.c_shim@${v}.so|g" "${2}"

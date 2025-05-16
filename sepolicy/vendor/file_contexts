@@ -41,6 +41,7 @@
 /dev/block/platform/soc/7824900\.sdhci/by-name/reserve2                     u:object_r:metadata_block_device:s0
 
 # RIL
+/(vendor|system/vendor)/bin/hw/legacy_rild                                  u:object_r:rild_exec:s0
 /(vendor|system/vendor)/radio/qcril_database/qcril.db                       u:object_r:rild_file:s0
 
 # Rootdir

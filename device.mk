@@ -362,13 +362,10 @@ PRODUCT_PACKAGES += \
     libxml2
 
 PRODUCT_PACKAGES += \
-<<<<<<< HEAD
-=======
-    android.hardware.radio@1.4-service.A57 \
+    libshims_legacy_ril \
     legacy_rild
 
 PRODUCT_PACKAGES += \
->>>>>>> d9c38a18f (A57: radio: Import rild from hardware/ril and rename to legacy_rild)
     android.hardware.radio.c_shim@1.0 \
     android.hardware.radio.c_shim@1.1 \
     android.hardware.radio.c_shim@1.2 \
