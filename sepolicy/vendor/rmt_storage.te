@@ -16,3 +16,6 @@ allow rmt_storage proc_oppo_info:file r_file_perms;
 # Recommended action is to further hex-edit the blob to add support for the
 # set-up, like how setgroups() dac_override issue had been fixed.
 allow rmt_storage self:capability net_raw;
+
+# Permit reading OTA version
+get_prop(rmt_storage, oppo_build_info_prop)
