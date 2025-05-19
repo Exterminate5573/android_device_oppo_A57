@@ -32,4 +32,5 @@ sys.listeners.registered                u:object_r:vendor_tee_listener_prop:s0
 
 # RIL
 ro.build.version.ota                    u:object_r:oppo_build_info_prop:s0
+oppo.device.imeicache                   u:object_r:vendor_radio_prop:s0
 ctl.vendor.imsrcsd                      u:object_r:vendor_ctl_vendor_imsrcsservice_prop:s0
