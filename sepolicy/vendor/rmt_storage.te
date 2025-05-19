@@ -8,6 +8,7 @@ userdebug_or_eng(`
 allow rmt_storage nvbackup_block_device:blk_file rw_file_perms;
 
 # Permit reading OPPO specific version information
+allow rmt_storage proc_oppo_info:dir r_dir_perms;
 allow rmt_storage proc_oppo_info:file r_file_perms;
 
 # FIXME: net_raw should not be granted to any service!
