@@ -3,6 +3,11 @@ typeattribute rild data_between_core_and_vendor_violators;
 allow rild rild_file:file r_file_perms;
 allow rild qtidataservices_app:binder call;
 
+# Allow rild access to legacy data paths
+allow rild radio_core_data_file:dir rw_dir_perms;
+allow rild radio_core_data_file:file rw_file_perms;
+allow rild system_data_file:dir rw_dir_perms;
+
 # Grant rild access to OPPO NV dump location
 allow rild nv_data_file:dir { getattr search write create add_name };
 allow rild nv_data_file:file { rw_file_perms create_file_perms };
