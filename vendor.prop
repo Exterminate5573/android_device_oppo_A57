@@ -46,7 +46,7 @@ bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 bluetooth.hfp.client=1
 persist.vendor.btstack.enable.splita2dp=false
-qcom.bluetooth.soc=smd
+persist.vendor.qcom.bluetooth.soc=smd
 ro.bluetooth.hfp.ver=1.7
 ro.qualcomm.bt.hci_transport=smd
 
