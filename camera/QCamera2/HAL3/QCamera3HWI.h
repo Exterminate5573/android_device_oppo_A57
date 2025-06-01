@@ -65,7 +65,6 @@ namespace qcamera {
 #endif
 
 /* Time related macros */
-typedef int64_t nsecs_t;
 #define NSEC_PER_SEC 1000000000LLU
 #define NSEC_PER_USEC 1000LLU
 #define NSEC_PER_33MSEC 33000000LLU
@@ -99,6 +98,8 @@ typedef struct {
     camera3_stream_t *stream;
     // Buffer handle
     buffer_handle_t *buffer;
+    // Buffer status
+    camera3_buffer_status_t bufStatus = CAMERA3_BUFFER_STATUS_OK;
 } PendingBufferInfo;
 
 typedef struct {
@@ -117,6 +118,7 @@ public:
     List<PendingBuffersInRequest> mPendingBuffersInRequest;
     uint32_t get_num_overall_buffers();
     void removeBuf(buffer_handle_t *buffer);
+    int32_t getBufErrStatus(buffer_handle_t *buffer);
 };
 
 
@@ -223,6 +225,10 @@ public:
     const char *getEepromVersionInfo();
     const uint32_t *getLdafCalib();
     void get3AVersion(cam_q3a_version_t &swVersion);
+    static void setBufferErrorStatus(QCamera3Channel*, uint32_t frameNumber,
+            camera3_buffer_status_t err, void *userdata);
+    void setBufferErrorStatus(QCamera3Channel*, uint32_t frameNumber,
+            camera3_buffer_status_t err);
 
     // Get dual camera related info
     bool isDeviceLinked() {return mIsDeviceLinked;}
@@ -538,6 +544,9 @@ private:
     cam_sync_related_sensors_event_info_t *m_pRelCamSyncBuf;
     cam_sync_related_sensors_event_info_t m_relCamSyncInfo;
 
+    //The offset between BOOTTIME and MONOTONIC timestamps
+    nsecs_t mBootToMonoTimestampOffset;
+    bool mUseAVTimer;
 };
 
 }; // namespace qcamera
